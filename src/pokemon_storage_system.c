@@ -41,7 +41,6 @@
 #include "constants/moves.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
-#include "constants/pokemon_icon.h"
 
 /*
     NOTE: This file is large. Some general groups of functions have
@@ -218,7 +217,7 @@ enum {
 #define BOXID_CANCELED    201
 
 enum {
-    PALTAG_MON_ICON_0 = POKE_ICON_BASE_PAL_TAG,
+    PALTAG_MON_ICON_0 = 56000,
     PALTAG_MON_ICON_1, // Used implicitly in CreateMonIconSprite
     PALTAG_MON_ICON_2, // Used implicitly in CreateMonIconSprite
     PALTAG_MON_ICON_3, // Used implicitly in CreateMonIconSprite
@@ -5549,7 +5548,10 @@ static void InitBoxTitle(u8 boxId)
     sStorage->wallpaperPalBits |= (1 << 16) << tagIndex;
 
     StringCopyPadded(sStorage->boxTitleText, GetBoxNamePtr(boxId), 0, BOX_NAME_LENGTH);
-    DrawTextWindowAndBufferTiles(sStorage->boxTitleText, sStorage->boxTitleTiles, 0, 0, 2);
+    if (DECAP_ENABLED && DECAP_MIRRORING)
+        DrawTextWindowAndBufferTiles(MirrorPtr(sStorage->boxTitleText), sStorage->boxTitleTiles, 0, 0, 2);
+    else
+        DrawTextWindowAndBufferTiles(sStorage->boxTitleText, sStorage->boxTitleTiles, 0, 0, 2);
     LoadSpriteSheet(&spriteSheet);
     x = GetBoxTitleBaseX(GetBoxNamePtr(boxId));
 
@@ -9607,7 +9609,10 @@ struct BoxPokemon *GetBoxedMonPtr(u8 boxId, u8 boxPosition)
 u8 *GetBoxNamePtr(u8 boxId)
 {
     if (boxId < TOTAL_BOXES_COUNT)
-        return gPokemonStoragePtr->boxNames[boxId];
+        if (DECAP_ENABLED && DECAP_MIRRORING)
+            return MirrorPtr(gPokemonStoragePtr->boxNames[boxId]);
+        else
+            return gPokemonStoragePtr->boxNames[boxId];
     else
         return NULL;
 }

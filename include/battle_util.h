@@ -91,7 +91,6 @@ enum
     CANCELLER_POWDER_MOVE,
     CANCELLER_POWDER_STATUS,
     CANCELLER_THROAT_CHOP,
-    CANCELLER_EXPLODING_DAMP,
     CANCELLER_MULTIHIT_MOVES,
     CANCELLER_Z_MOVES,
     CANCELLER_END,
@@ -164,10 +163,8 @@ void ClearVariousBattlerFlags(u32 battler);
 void HandleAction_RunBattleScript(void);
 u32 SetRandomTarget(u32 battler);
 u32 GetMoveTarget(u16 move, u8 setTarget);
-u8 IsMonDisobedient(void);
+//u8 IsMonDisobedient(void);
 u32 GetBattlerHoldEffect(u32 battler, bool32 checkNegating);
-u32 GetBattlerHoldEffectIgnoreAbility(u32 battler, bool32 checkNegating);
-u32 GetBattlerHoldEffectInternal(u32 battler, bool32 checkNegating, bool32 checkAbility);
 u32 GetBattlerHoldEffectParam(u32 battler);
 bool32 IsMoveMakingContact(u32 move, u32 battlerAtk);
 bool32 IsBattlerGrounded(u32 battler);
@@ -202,7 +199,6 @@ u8 GetBattleMoveCategory(u32 moveId);
 bool32 CanFling(u32 battler);
 bool32 IsTelekinesisBannedSpecies(u16 species);
 bool32 IsHealBlockPreventingMove(u32 battler, u32 move);
-bool32 IsBelchPreventingMove(u32 battler, u32 move);
 bool32 HasEnoughHpToEatBerry(u32 battler, u32 hpFraction, u32 itemId);
 bool32 IsPartnerMonFromSameTrainer(u32 battler);
 u8 GetCategoryBasedOnStats(u32 battler);

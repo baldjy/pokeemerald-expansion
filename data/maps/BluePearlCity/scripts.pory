@@ -1,0 +1,25 @@
+mapscripts BluePearlCity_MapScripts {}
+script FisherTalk{
+    checkitem(ITEM_SUPER_ROD)
+    if(var(VAR_RESULT) == 0)
+    {
+        faceplayer
+        lockall
+        msgbox(format("Hey kid! You look like someone who wants to be the greatest, am I right?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox(format("I KNEW IT!\pTake this and chase your greatest fisher dream!"))
+            giveitem(ITEM_SUPER_ROD)
+            msgbox(format("Now go for the big ones! Don't let'em waiting."))
+        }
+        else{msgbox(format("Guess I was wrong...\pLet me know if you change your mind"))}
+        releaseall
+        end
+    }
+	else{
+        faceplayer
+        lockall
+        msgbox(format("Now go for the big ones! Don't let'em waiting."))
+        releaseall
+        end 
+    }
+} 

@@ -1,0 +1,141 @@
+mapscripts NewMap3_MapScripts {}
+
+script Littleroot_NewMap3_EventScript_Steven{
+	lock
+	faceplayer
+	if (!(flag(FLAG_DEFEATED_STEVENGYM))){
+		switch (var(VAR_BADGENUMBER_STATE)){
+    	case 0: 
+			call(LittlerootTown_Gym_EventScript_StevenNoBadges)
+    	case 1: 
+			call(LittlerootTown_Gym_EventScript_StevenOneBadge)
+		case 2: 
+			call(LittlerootTown_Gym_EventScript_StevenTwoBadges)
+    	}
+	}
+	else{
+		msgbox(LittlerootTown_Gym_Text_StevenPostBattle)
+	}
+	waitmessage
+	releaseall
+	end
+
+}
+
+
+script LittlerootTown_Gym_EventScript_StevenNoBadges{
+	trainerbattle_single (TRAINER_MAY_ROUTE_103_MUDKIP, FirstGym_StevenIntro, FirstGym_StevenDefeat, FirstGym_EventScript_StevenDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_StevenPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+script LittlerootTown_Gym_EventScript_StevenOneBadge{
+	trainerbattle_single (TRAINER_MAY_ROUTE_110_MUDKIP, SecondGym_StevenIntro, SecondGym_Text_StevenDefeat, SecondGym_EventScript_StevenDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_StevenPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+script LittlerootTown_Gym_EventScript_StevenTwoBadges{
+	trainerbattle_single (TRAINER_MAY_ROUTE_119_MUDKIP, ThirdGym_StevenIntro, ThirdGym_StevenDefeat, ThirdGym_EventScript_StevenDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_StevenPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+
+
+
+script FirstGym_EventScript_StevenDefeated{
+	message (FirstGym_Text_ReceivedStevenBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((StevenGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_STEVENGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text FirstGym_Text_ReceivedStevenBadge{
+	"{PLAYER} received their first badge!"
+    }
+
+
+script SecondGym_EventScript_StevenDefeated{
+	message (SecondGym_Text_ReceivedStevenBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((StevenGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_STEVENGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text SecondGym_Text_ReceivedStevenBadge{
+	"{PLAYER} received their second badge!"
+    }
+    
+
+script ThirdGym_EventScript_StevenDefeated{
+	message (ThirdGym_Text_ReceivedStevenBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((StevenGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_STEVENGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text ThirdGym_Text_ReceivedStevenBadge{
+	"{PLAYER} received their third badge!"
+    }
+    
+
+
+text FirstGym_StevenIntro{
+    "Let's have a good one, shall we?."
+}
+
+text FirstGym_StevenDefeat{
+    "I wasn't expecting this..."
+}
+
+text SecondGym_StevenIntro{
+    "You look strong! Let's battle!"
+}
+
+text SecondGym_Text_StevenDefeat{
+    "You are indeed strong..."
+}
+
+text ThirdGym_StevenIntro{
+    "I was waiting for you!"
+}
+
+text ThirdGym_StevenDefeat{
+    "So this is it..."
+}
+
+text StevenGym_Text_BadgeInfoTakeThis{
+	"This badge is proof of your strength."
+}
+
+text LittlerootTown_Gym_Text_StevenPostBattle{
+    "Good luck moving forward."
+}

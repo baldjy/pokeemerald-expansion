@@ -1,0 +1,18 @@
+mapscripts Lab1stFloor_MapScripts {
+}
+script ReceptionTalk{
+	faceplayer
+	lockall
+	msgbox(format("You must be LEWIS's kid.\pIf you're looking for your Dad you can go straight upstairs"))
+	releaseall
+	end
+}
+
+script LabGossip{
+	lockall
+	msgbox(format("And then, she came all the way towards me and said:\pWHAT ARE YOU LOOKING AT MISTER?"))
+	msgbox(format("Oh my godd...\pAnd then?"))
+	msgbox(format("And then I woke up.\pThat was a weird dream..."))
+    releaseall
+	end
+}

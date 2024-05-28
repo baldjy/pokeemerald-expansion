@@ -1,0 +1,141 @@
+mapscripts NewMap2_MapScripts {}
+
+script Littleroot_NewMap2_EventScript_Anabel{
+	lock
+	faceplayer
+	if (!(flag(FLAG_DEFEATED_ANABELGYM))){
+		switch (var(VAR_BADGENUMBER_STATE)){
+    	case 0:
+			call (LittlerootTown_Gym_EventScript_AnabelNoBadges)
+    	case 1: 	
+			call (LittlerootTown_Gym_EventScript_AnabelOneBadge)
+		case 2: 
+			call (LittlerootTown_Gym_EventScript_AnabelTwoBadges)
+    	}
+	}
+	else{
+		msgbox(LittlerootTown_Gym_Text_AnabelPostBattle)
+	}
+	waitmessage
+	releaseall
+	end
+
+}
+
+
+script LittlerootTown_Gym_EventScript_AnabelNoBadges{
+	trainerbattle_single (TRAINER_MAY_ROUTE_103_TREECKO, FirstGym_AnabelIntro, FirstGym_AnabelDefeat, FirstGym_EventScript_AnabelDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_AnabelPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+script LittlerootTown_Gym_EventScript_AnabelOneBadge{
+	trainerbattle_single (TRAINER_MAY_ROUTE_110_TREECKO, SecondGym_AnabelIntro, SecondGym_Text_AnabelDefeat, SecondGym_EventScript_AnabelDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_AnabelPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+script LittlerootTown_Gym_EventScript_AnabelTwoBadges{
+	trainerbattle_single (TRAINER_MAY_ROUTE_119_TREECKO, ThirdGym_AnabelIntro, ThirdGym_AnabelDefeat, ThirdGym_EventScript_AnabelDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_AnabelPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+
+
+
+script FirstGym_EventScript_AnabelDefeated{
+	message (FirstGym_Text_ReceivedAnabelBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((AnabelGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_ANABELGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text FirstGym_Text_ReceivedAnabelBadge{
+	"{PLAYER} received their first badge!"
+    }
+
+
+script SecondGym_EventScript_AnabelDefeated{
+	message (SecondGym_Text_ReceivedAnabelBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((AnabelGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_ANABELGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text SecondGym_Text_ReceivedAnabelBadge{
+	"{PLAYER} received their second badge!"
+    }
+    
+
+script ThirdGym_EventScript_AnabelDefeated{
+	message (ThirdGym_Text_ReceivedAnabelBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((AnabelGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_ANABELGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text ThirdGym_Text_ReceivedAnabelBadge{
+	"{PLAYER} received their third badge!"
+    }
+    
+
+
+text FirstGym_AnabelIntro{
+    "I'm Anabel, and this is your first challenge."
+}
+
+text FirstGym_AnabelDefeat{
+    "You got potential!"
+}
+
+text SecondGym_AnabelIntro{
+    "You already defeated one gym leader, huh?"
+}
+
+text SecondGym_Text_AnabelDefeat{
+    "That makes it two, huh?"
+}
+
+text ThirdGym_AnabelIntro{
+    "I'm not holding back!"
+}
+
+text ThirdGym_AnabelDefeat{
+    "Congratulations!"
+}
+
+text AnabelGym_Text_BadgeInfoTakeThis{
+	"This badge is proof of your strength."
+}
+
+text LittlerootTown_Gym_Text_AnabelPostBattle{
+    "Good luck moving forward."
+}

@@ -1,0 +1,9 @@
+mapscripts RosethornCity_MapScripts {
+}
+
+script BlockMove1 {
+    lockall
+    faceplayer
+    msgbox("These guys are blocking the road")
+    releaseall
+}

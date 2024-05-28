@@ -579,7 +579,6 @@ gStdScripts_End::
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hall_of_fame.inc"
 
-	.include "data/scripts/config.inc"
 	.include "data/scripts/debug.inc"
 
 EventScript_WhiteOut::
@@ -1072,3 +1071,173 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/Gym1/scripts.inc"
+
+	.include "data/maps/NewMap2/scripts.inc"
+
+	.include "data/maps/NewMap3/scripts.inc"
+
+	.include "data/maps/PlayerHouse/scripts.inc"
+
+	.include "data/maps/RosethornCity/scripts.inc"
+
+	.include "data/maps/Route401/scripts.inc"
+
+	.include "data/maps/Route402/scripts.inc"
+
+	.include "data/maps/Route403/scripts.inc"
+
+	.include "data/maps/Route404/scripts.inc"
+
+	.include "data/maps/Route601/scripts.inc"
+
+	.include "data/maps/Route601Left/scripts.inc"
+
+	.include "data/maps/Route601Right/scripts.inc"
+
+	.include "data/maps/Route602/scripts.inc"
+
+	.include "data/maps/Route405/scripts.inc"
+
+	.include "data/maps/Route406/scripts.inc"
+
+	.include "data/maps/Route403Extension/scripts.inc"
+
+	.include "data/maps/WayToDuskForest/scripts.inc"
+
+	.include "data/maps/Route603/scripts.inc"
+
+	.include "data/maps/MarigoldTown/scripts.inc"
+
+	.include "data/maps/Route604/scripts.inc"
+
+	.include "data/maps/Route604Right/scripts.inc"
+
+	.include "data/maps/Route605/scripts.inc"
+
+	.include "data/maps/Route605Left/scripts.inc"
+
+	.include "data/maps/GrandportCity/scripts.inc"
+
+	.include "data/maps/Route606/scripts.inc"
+
+	.include "data/maps/BenimoTown/scripts.inc"
+
+	.include "data/maps/AmaryllisCity/scripts.inc"
+
+	.include "data/maps/Route607/scripts.inc"
+
+	.include "data/maps/Route608/scripts.inc"
+
+	.include "data/maps/Route701/scripts.inc"
+
+	.include "data/maps/KarimaDesert/scripts.inc"
+
+	.include "data/maps/Route702/scripts.inc"
+
+	.include "data/maps/Route703/scripts.inc"
+
+	.include "data/maps/Route609/scripts.inc"
+
+	.include "data/maps/Route610/scripts.inc"
+
+	.include "data/maps/RedDustTownWest/scripts.inc"
+
+	.include "data/maps/Route704/scripts.inc"
+
+	.include "data/maps/Route705/scripts.inc"
+
+	.include "data/maps/Route611/scripts.inc"
+
+	.include "data/maps/Route612/scripts.inc"
+
+	.include "data/maps/Route613/scripts.inc"
+
+	.include "data/maps/Route614/scripts.inc"
+
+	.include "data/maps/Route615/scripts.inc"
+
+	.include "data/maps/FifthTown/scripts.inc"
+
+	.include "data/maps/Route616/scripts.inc"
+
+	.include "data/maps/Route617/scripts.inc"
+
+	.include "data/maps/Route618/scripts.inc"
+
+	.include "data/maps/Route619/scripts.inc"
+
+	.include "data/maps/FifthCity/scripts.inc"
+
+	.include "data/maps/MoonlightLake/scripts.inc"
+
+	.include "data/maps/PlayerRoom/scripts.inc"
+
+	.include "data/maps/Lab1stFloor/scripts.inc"
+
+	.include "data/maps/Lab2ndFloor/scripts.inc"
+
+	.include "data/maps/BluePearlCity/scripts.inc"
+
+	.include "data/maps/RedDustTown/scripts.inc"
+
+	.include "data/maps/BluePearlGymHall/scripts.inc"
+
+	.include "data/maps/BluePearlGymMain/scripts.inc"
+
+	.include "data/maps/RosethornPokeCenter/scripts.inc"
+
+	.include "data/maps/RosethornMart/scripts.inc"
+
+	.include "data/maps/SurfSchool/scripts.inc"
+
+	.include "data/maps/SurfPool/scripts.inc"
+
+	.include "data/maps/BluePearlPokecenter/scripts.inc"
+
+	.include "data/maps/BluePearlMart/scripts.inc"
+
+	.include "data/maps/MarigoldMart/scripts.inc"
+
+	.include "data/maps/MarigoldPokecenter/scripts.inc"
+
+	.include "data/maps/GrandportGymHall/scripts.inc"
+
+	.include "data/maps/GrandportGymMain/scripts.inc"
+
+	.include "data/maps/GrandportPokeconter/scripts.inc"
+
+	.include "data/maps/GrandportMart/scripts.inc"
+
+	.include "data/maps/AmaryllisPokecenter/scripts.inc"
+
+	.include "data/maps/AmaryllisMart/scripts.inc"
+
+	.include "data/maps/AmaryllisGymHall/scripts.inc"
+
+	.include "data/maps/AmaryllisGymMain/scripts.inc"
+
+	.include "data/maps/AmaryllisMuseum/scripts.inc"
+
+	.include "data/maps/BenimoPokecenter/scripts.inc"
+
+	.include "data/maps/RedDustPokeCenter/scripts.inc"
+
+	.include "data/maps/BenimoMart/scripts.inc"
+
+	.include "data/maps/RedDustMart/scripts.inc"
+
+	.include "data/maps/RedDustGymHall/scripts.inc"
+
+	.include "data/maps/RedDustGymMain/scripts.inc"
+
+	.include "data/maps/StrenghtSchool/scripts.inc"
+
+	.include "data/maps/AmaryllisStation/scripts.inc"
+
+	.include "data/maps/RosethornStation/scripts.inc"
+
+	.include "data/maps/GrandportStation/scripts.inc"
+
+	.include "data/maps/BikeHouse/scripts.inc"

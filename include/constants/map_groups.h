@@ -63,6 +63,54 @@
 #define MAP_UNDERWATER_ROUTE129 (54 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE105 (55 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
+#define MAP_ROSETHORN_CITY      (57 | (0 << 8))
+#define MAP_ROUTE401            (58 | (0 << 8))
+#define MAP_ROUTE402            (59 | (0 << 8))
+#define MAP_ROUTE403            (60 | (0 << 8))
+#define MAP_ROUTE404            (61 | (0 << 8))
+#define MAP_BLUE_PEARL_CITY     (62 | (0 << 8))
+#define MAP_ROUTE601            (63 | (0 << 8))
+#define MAP_ROUTE601LEFT        (64 | (0 << 8))
+#define MAP_ROUTE601RIGHT       (65 | (0 << 8))
+#define MAP_ROUTE602            (66 | (0 << 8))
+#define MAP_ROUTE405            (67 | (0 << 8))
+#define MAP_ROUTE406            (68 | (0 << 8))
+#define MAP_ROUTE403EXTENSION   (69 | (0 << 8))
+#define MAP_WAY_TO_DUSK_FOREST  (70 | (0 << 8))
+#define MAP_ROUTE603            (71 | (0 << 8))
+#define MAP_MARIGOLD_TOWN       (72 | (0 << 8))
+#define MAP_ROUTE604            (73 | (0 << 8))
+#define MAP_ROUTE604RIGHT       (74 | (0 << 8))
+#define MAP_ROUTE605            (75 | (0 << 8))
+#define MAP_ROUTE605LEFT        (76 | (0 << 8))
+#define MAP_GRANDPORT_CITY      (77 | (0 << 8))
+#define MAP_ROUTE606            (78 | (0 << 8))
+#define MAP_BENIMO_TOWN         (79 | (0 << 8))
+#define MAP_AMARYLLIS_CITY      (80 | (0 << 8))
+#define MAP_ROUTE607            (81 | (0 << 8))
+#define MAP_ROUTE608            (82 | (0 << 8))
+#define MAP_ROUTE701            (83 | (0 << 8))
+#define MAP_KARIMA_DESERT       (84 | (0 << 8))
+#define MAP_ROUTE702            (85 | (0 << 8))
+#define MAP_ROUTE703            (86 | (0 << 8))
+#define MAP_ROUTE609            (87 | (0 << 8))
+#define MAP_ROUTE610            (88 | (0 << 8))
+#define MAP_RED_DUST_TOWN_WEST  (89 | (0 << 8))
+#define MAP_ROUTE704            (90 | (0 << 8))
+#define MAP_ROUTE705            (91 | (0 << 8))
+#define MAP_ROUTE611            (92 | (0 << 8))
+#define MAP_ROUTE612            (93 | (0 << 8))
+#define MAP_ROUTE613            (94 | (0 << 8))
+#define MAP_ROUTE614            (95 | (0 << 8))
+#define MAP_ROUTE615            (96 | (0 << 8))
+#define MAP_FIFTH_TOWN          (97 | (0 << 8))
+#define MAP_ROUTE616            (98 | (0 << 8))
+#define MAP_ROUTE617            (99 | (0 << 8))
+#define MAP_ROUTE618            (100 | (0 << 8))
+#define MAP_ROUTE619            (101 | (0 << 8))
+#define MAP_FIFTH_CITY          (102 | (0 << 8))
+#define MAP_MOONLIGHT_LAKE      (103 | (0 << 8))
+#define MAP_RED_DUST_TOWN       (104 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -70,6 +118,9 @@
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F        (2 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (3 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
+#define MAP_GYM1                                 (5 | (1 << 8))
+#define MAP_NEW_MAP2                             (6 | (1 << 8))
+#define MAP_NEW_MAP3                             (7 | (1 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
@@ -591,6 +642,54 @@
 // gMapGroup_IndoorRoute124
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
-#define MAP_GROUPS_COUNT 34
+// gMapGroup_RosethornCity
+#define MAP_PLAYER_HOUSE          (0 | (34 << 8))
+#define MAP_PLAYER_ROOM           (1 | (34 << 8))
+#define MAP_LAB1ST_FLOOR          (2 | (34 << 8))
+#define MAP_LAB2ND_FLOOR          (3 | (34 << 8))
+#define MAP_ROSETHORN_POKE_CENTER (4 | (34 << 8))
+#define MAP_ROSETHORN_MART        (5 | (34 << 8))
+#define MAP_ROSETHORN_STATION     (6 | (34 << 8))
+
+// gMapGroup_BluePearlCity
+#define MAP_BLUE_PEARL_GYM_HALL   (0 | (35 << 8))
+#define MAP_BLUE_PEARL_GYM_MAIN   (1 | (35 << 8))
+#define MAP_SURF_SCHOOL           (2 | (35 << 8))
+#define MAP_SURF_POOL             (3 | (35 << 8))
+#define MAP_BLUE_PEARL_POKECENTER (4 | (35 << 8))
+#define MAP_BLUE_PEARL_MART       (5 | (35 << 8))
+
+// gMapGroup_MarigoldTown
+#define MAP_MARIGOLD_MART       (0 | (36 << 8))
+#define MAP_MARIGOLD_POKECENTER (1 | (36 << 8))
+#define MAP_BIKE_HOUSE          (2 | (36 << 8))
+
+// gMapGroup_GrandportCity
+#define MAP_GRANDPORT_GYM_HALL   (0 | (37 << 8))
+#define MAP_GRANDPORT_GYM_MAIN   (1 | (37 << 8))
+#define MAP_GRANDPORT_POKECONTER (2 | (37 << 8))
+#define MAP_GRANDPORT_MART       (3 | (37 << 8))
+#define MAP_GRANDPORT_STATION    (4 | (37 << 8))
+
+// gMapGroup_AmaryllisCity
+#define MAP_AMARYLLIS_POKECENTER (0 | (38 << 8))
+#define MAP_AMARYLLIS_MART       (1 | (38 << 8))
+#define MAP_AMARYLLIS_GYM_HALL   (2 | (38 << 8))
+#define MAP_AMARYLLIS_GYM_MAIN   (3 | (38 << 8))
+#define MAP_AMARYLLIS_MUSEUM     (4 | (38 << 8))
+#define MAP_STRENGHT_SCHOOL      (5 | (38 << 8))
+#define MAP_AMARYLLIS_STATION    (6 | (38 << 8))
+
+// gMapGroup_BenimoTown
+#define MAP_BENIMO_POKECENTER (0 | (39 << 8))
+#define MAP_BENIMO_MART       (1 | (39 << 8))
+
+// gMapGroup_RedDustTown
+#define MAP_RED_DUST_POKE_CENTER (0 | (40 << 8))
+#define MAP_RED_DUST_MART        (1 | (40 << 8))
+#define MAP_RED_DUST_GYM_HALL    (2 | (40 << 8))
+#define MAP_RED_DUST_GYM_MAIN    (3 | (40 << 8))
+
+#define MAP_GROUPS_COUNT 41
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

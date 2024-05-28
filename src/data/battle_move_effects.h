@@ -1228,6 +1228,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_BULLDOZE] =
+    {
+        .battleScript = BattleScript_EffectHit,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+
     [EFFECT_FOUL_PLAY] =
     {
         .battleScript = BattleScript_EffectHit,
@@ -1760,6 +1766,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_MIND_BLOWN] =
+    {
+        .battleScript = BattleScript_EffectMindBlown,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+
     [EFFECT_PURIFY] =
     {
         .battleScript = BattleScript_EffectPurify,
@@ -2017,13 +2029,7 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
 
     [EFFECT_MAX_HP_50_RECOIL] =
     {
-        .battleScript = BattleScript_EffectHit,
-        .battleTvScore = 0, // TODO: Assign points
-    },
-
-    [EFFECT_MIND_BLOWN] =
-    {
-        .battleScript = BattleScript_EffectHit,
+        .battleScript = BattleScript_EffectMaxHp50Recoil,
         .battleTvScore = 0, // TODO: Assign points
     },
 

@@ -2894,7 +2894,13 @@ static const union AnimCmd sAnim_Mismagius_1[] =
 #endif //P_FAMILY_MISDREAVUS
 
 #if P_FAMILY_UNOWN
-PLACEHOLDER_ANIM_SINGLE_FRAME(Unown);
+static const union AnimCmd sAnim_Unown_1[] =
+{
+    ANIMCMD_FRAME(0, 30),
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
 #endif //P_FAMILY_UNOWN
 
 #if P_FAMILY_WOBBUFFET

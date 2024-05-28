@@ -1,24 +1,29 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Own Tempo prevents Intimidate but no other stat down changes")
+SINGLE_BATTLE_TEST("Own Tempo prevents intimidate")
 {
+    s16 turnOneHit;
+    s16 turnTwoHit;
+
     GIVEN {
         ASSUME(B_UPDATED_INTIMIDATE >= GEN_8);
-        ASSUME(gMovesInfo[MOVE_CONFUSE_RAY].effect == EFFECT_CONFUSE);
+        PLAYER(SPECIES_EKANS) { Ability(ABILITY_SHED_SKIN); };
         PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); };
         OPPONENT(SPECIES_SLOWPOKE) { Ability(ABILITY_OWN_TEMPO); };
     } WHEN {
-        TURN { MOVE(player, MOVE_SCARY_FACE); }
+        TURN { MOVE(opponent, MOVE_TACKLE); }
+        TURN { SWITCH(player, 1); MOVE(opponent, MOVE_TACKLE); }
+
     } SCENE {
+        HP_BAR(player, captureDamage: &turnOneHit);
         ABILITY_POPUP(player, ABILITY_INTIMIDATE);
+        NONE_OF { ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, player); }
         ABILITY_POPUP(opponent, ABILITY_OWN_TEMPO);
         MESSAGE("Foe Slowpoke's Own Tempo prevents stat loss!");
-        ANIMATION(ANIM_TYPE_MOVE, MOVE_SCARY_FACE, player);
-        NONE_OF {
-            ABILITY_POPUP(opponent, ABILITY_OWN_TEMPO);
-            MESSAGE("Foe Slowpoke's Own Tempo prevents stat loss!");
-        }
+        HP_BAR(player, captureDamage: &turnTwoHit);
+    } THEN {
+        EXPECT_EQ(turnOneHit, turnTwoHit);
     }
 }
 

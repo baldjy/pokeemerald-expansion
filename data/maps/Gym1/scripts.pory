@@ -1,0 +1,141 @@
+mapscripts Gym1_MapScripts {}
+
+script Littleroot_Gym1_EventScript_Lucy{
+	lock
+	faceplayer
+	if (!(flag(FLAG_DEFEATED_LUCYGYM))){
+		switch (var(VAR_BADGENUMBER_STATE)){
+   		case 0: 
+			call (LittlerootTown_Gym_EventScript_LucyNoBadges)
+    	case 1: 
+			call (LittlerootTown_Gym_EventScript_LucyOneBadge)
+		case 2: 
+			call (LittlerootTown_Gym_EventScript_LucyTwoBadges)
+   		}
+	
+	}
+	else{
+		msgbox(LittlerootTown_Gym_Text_LucyPostBattle)
+	}
+	waitmessage
+	releaseall
+	end
+}
+
+
+script LittlerootTown_Gym_EventScript_LucyNoBadges{
+	trainerbattle_single (TRAINER_MAY_ROUTE_103_TORCHIC, FirstGym_LucyIntro, FirstGym_LucyDefeat, FirstGym_EventScript_LucyDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_LucyPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+script LittlerootTown_Gym_EventScript_LucyOneBadge{
+	trainerbattle_single (TRAINER_MAY_ROUTE_110_TORCHIC, SecondGym_LucyIntro, SecondGym_Text_LucyDefeat, SecondGym_EventScript_LucyDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_LucyPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+script LittlerootTown_Gym_EventScript_LucyTwoBadges{
+	trainerbattle_single (TRAINER_MAY_ROUTE_119_TORCHIC, ThirdGym_LucyIntro, ThirdGym_LucyDefeat, ThirdGym_EventScript_LucyDefeated, NO_MUSIC)
+	msgbox (LittlerootTown_Gym_Text_LucyPostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	release
+	end
+
+}
+
+
+
+
+script FirstGym_EventScript_LucyDefeated{
+	message (FirstGym_Text_ReceivedLucyBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((LucyGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_LUCYGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text FirstGym_Text_ReceivedLucyBadge{
+	"{PLAYER} received their first badge!"
+    }
+
+
+script SecondGym_EventScript_LucyDefeated{
+	message (SecondGym_Text_ReceivedLucyBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((LucyGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_LUCYGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text SecondGym_Text_ReceivedLucyBadge{
+	"{PLAYER} received their second badge!"
+    }
+    
+
+script ThirdGym_EventScript_LucyDefeated{
+	message (ThirdGym_Text_ReceivedLucyBadge)
+	waitmessage
+	call (Common_EventScript_PlayGymBadgeFanfare)
+	msgbox ((LucyGym_Text_BadgeInfoTakeThis), MSGBOX_AUTOCLOSE)
+	setflag (FLAG_DEFEATED_LUCYGYM)
+	addvar ((VAR_BADGENUMBER_STATE), 1)
+	call (Common_EventScript_SetGymTrainers)
+	waitmessage
+	end
+
+}
+
+text ThirdGym_Text_ReceivedLucyBadge{
+	"{PLAYER} received their third badge!"
+    }
+    
+
+
+text FirstGym_LucyIntro{
+    "So this is your first gym, huh?"
+}
+
+text FirstGym_LucyDefeat{
+    "I underestimated you!"
+}
+
+text SecondGym_LucyIntro{
+    "I see you already got one badge!"
+}
+
+text SecondGym_Text_LucyDefeat{
+    "Great job on your second badge!"
+}
+
+text ThirdGym_LucyIntro{
+    "I am going all out!"
+}
+
+text ThirdGym_LucyDefeat{
+    "You are tough!"
+}
+
+text LucyGym_Text_BadgeInfoTakeThis{
+	"This badge is proof of your strength."
+}
+
+text LittlerootTown_Gym_Text_LucyPostBattle{
+    "Good luck moving forward."
+}

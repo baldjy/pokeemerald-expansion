@@ -1781,7 +1781,7 @@ const struct Item gItemsInfo[] =
     [ITEM_EXP_CANDY_XL] =
     {
         .name = _("Exp.Candy XL"),
-        .pluralName = _("Exp.Candies XL"),
+        .pluralName = _("Exp.Candies L"),
         .price = 10000,
         .holdEffectParam = EXP_30000,
         .description = COMPOUND_STRING(
@@ -3682,7 +3682,7 @@ const struct Item gItemsInfo[] =
         .name = _("Dubious Disc"),
         .price = (I_PRICE >= GEN_7) ? 2000 * TREASURE_FACTOR : 2100,
         .description = COMPOUND_STRING(
-            "A clear device\n"
+            "A transparent device\n"
             "overflowing with\n"
             "dubious data."),
         .pocket = POCKET_ITEMS,
@@ -9412,11 +9412,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Fires an icy cold\n"
             "beam that may\n"
-        #if B_USE_FROSTBITE == TRUE
-            "inflict frostbite."),
-        #else
             "freeze the foe."),
-        #endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -9429,15 +9425,9 @@ const struct Item gItemsInfo[] =
         .name = _("TM14"),
         .price = 5500,
         .description = COMPOUND_STRING(
-        #if B_USE_FROSTBITE == TRUE
-            "A snow-and-wind\n"
-            "attack that may\n"
-            "inflict frostbite."),
-        #else
             "A brutal snow-and-\n"
             "wind attack that\n"
             "may freeze the foe."),
-        #endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -10773,7 +10763,7 @@ const struct Item gItemsInfo[] =
         .importance = 1,
         .description = COMPOUND_STRING(
             "A catalog full of\n"
-            "devices liked by\n"
+            "deviced liked by\n"
             "Rotom."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -10982,6 +10972,20 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_Bike,
         .secondaryId = ACRO_BIKE,
+    },
+
+    [ITEM_BIKETOOLBOX] =
+    {
+        .name = _("Bike Tools"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A set of tools\n"
+            "that changes your\n"
+            "bike type."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_BikeTools,
     },
 
     [ITEM_OLD_ROD] =

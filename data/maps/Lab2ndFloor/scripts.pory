@@ -1,0 +1,248 @@
+mapscripts Lab2ndFloor_MapScripts {
+}
+const LOCALID_BIRCH = 1
+const LOCALID_PKBALL1 = 2
+const LOCALID_PKBALL2 = 3
+const LOCALID_PKBALL3 = 4
+
+script DaddyTalk{
+	if(!flag(DADDYTALK)){
+		faceplayer
+		applymovement(LOCALID_BIRCH, Common_Movement_FaceDown)
+		lockall
+		msgbox(format("DAD: There you are kiddo!\pDAD: I'm glad you could come so fast!\pDAD: First of all I would like to introduce you to my new boss!\pDAD: This is Professor BIRCH!"))
+		msgbox(format("BIRCH: Hello there!\pBIRCH: You must be LEWIS's kid!\pBIRCH: I'm Professor BIRCH But everyone calls me the POKéMON PROFESSOR\pBIRCH: your dad was jsut telling me how much you love POKÉMON"))
+		msgbox(format("DAD: Which brings us to the reason why I called you here\pDAD: While I'm here starting my new research on POKÉMON types change on Regional Forms,\pDAD: I think it would be great to have you explore the world on your very first pokémon adventure!"))
+		msgbox(format("BIRCH: And I, as chief on this new lab am very pleased to gift your very first POKÉMON!\pBIRCH: See that bench right behind us, there you will see 3 POKÉBALLs which one cointaing a POKÉMON for you to choose\pBIRCH: Go on! Don't leave them waiting!"))
+		setflag(DADDYTALK)
+		releaseall
+		end
+	}
+	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3))){
+		faceplayer
+		lockall
+		msgbox("DAD: Go on! there are no bad choices!")
+		releaseall
+		end
+	}
+	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)) && !flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
+	{
+		lockall
+		msgbox(format("DAD: Go on kid, say thank you to PROF. BIRCH"))
+		releaseall
+	}
+	elif(flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
+	{
+		lockall
+		msgbox("DAD: Safe journey out there!")
+		releaseall
+	}
+}
+script FillerText{
+	faceplayer
+	lockall
+	msgbox(format("I'm sorry but I'm very busy right now"))
+	releaseall
+	end
+}
+script FillerText2{
+	faceplayer
+	lockall
+	msgbox(format("MY DAD IS BETTER THAN YOURS!"))
+	releaseall
+	end
+}
+
+script BirchTalk{
+	if(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
+		{
+			if(!flag(DADDYTALK)){
+			faceplayer
+			lockall
+			msgbox(format("BIRCH: Oh you're {PLAYER}, right? Your dad was looking for you!"))
+			releaseall
+			end
+		}
+		else{
+			faceplayer
+			lockall
+			msgbox(format("BIRCH: Go on! Don't leave them waiting!"))
+			releaseall
+			end
+		}
+	}
+	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)) && !flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
+	{
+		lockall
+		bufferleadmonspeciesname(0)
+		msgbox(format("BIRCH: I see you got a {STR_VAR_1}\pBIRCH: I'm pretty sure you both will grow stronger and closer as you progress on your adventure\pBIRCH: Since you're now a POKÉMON Trainer I believe you're going to need this too."))
+		call(GiveDexAndPokeMenu)
+		releaseall
+	}
+	elif(flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
+	{
+		lockall
+		msgbox("BIRCH: Have fun out there!")
+		releaseall
+	}
+}
+script PkBall1
+{
+	if(!flag(DADDYTALK)){
+		lockall
+		msgbox("I gotta talk to Dad first")
+		releaseall
+	}
+	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
+	{
+		lockall
+    	showmonpic(SPECIES_TREECKO, 10, 3)
+    	playmoncry(SPECIES_TREECKO, CRY_MODE_ENCOUNTER)
+    	waitmoncry
+    	msgbox("It's a TREECKO! Do you want to take it?", MSGBOX_YESNO)
+    	if(var(VAR_RESULT) == YES)
+    	{
+        	hidemonpic
+        	playfanfare(MUS_OBTAIN_ITEM)
+        	removeobject(LOCALID_PKBALL1)
+        	givemon(SPECIES_TREECKO,5)
+        	call(EnablePokemonMenu)
+        	msgbox("You got a TREECKO")
+			setflag(PKBALL1)
+        	waitfanfare
+        	call(NicknamePartyMon)
+        	releaseall
+    	}
+    	else {
+        	msgbox(format("BIRCH: It's ok! Go check the other POKÉMON"))
+        	hidemonpic
+    	}
+    	waitmessage
+    	releaseall
+	}
+	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
+	{
+		lockall
+		msgbox("I already got my POKÉMON")
+		releaseall
+	}
+
+}
+
+script PkBall2
+{
+	if(!flag(DADDYTALK)){
+		lockall
+		msgbox("I gotta talk to Dad first")
+		releaseall
+	}
+	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
+	{
+		lockall
+    	showmonpic(SPECIES_FROAKIE, 10, 3)
+    	playmoncry(SPECIES_FROAKIE, CRY_MODE_ENCOUNTER)
+    	waitmoncry
+    	msgbox("It's a FROAKIE! Do you want to take it?", MSGBOX_YESNO)
+    	if(var(VAR_RESULT) == YES)
+    	{
+        	hidemonpic
+        	playfanfare(MUS_OBTAIN_ITEM)
+        	removeobject(LOCALID_PKBALL2)
+        	givemon(SPECIES_FROAKIE,5)
+        	call(EnablePokemonMenu)
+        	msgbox("You got a FROAKIE")
+			setflag(PKBALL2)
+        	waitfanfare
+        	call(NicknamePartyMon)
+        	releaseall
+    	}
+    	else {
+        	msgbox(format("BIRCH: It's ok! Go check the other POKÉMON"))
+        	hidemonpic
+    	}
+    	waitmessage
+    	releaseall
+	}
+	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
+	{
+		lockall
+		msgbox("I already got my POKÉMON")
+		releaseall
+	}
+
+}
+script PkBall3
+{
+	if(!flag(DADDYTALK)){
+		lockall
+		msgbox("I gotta talk to Dad first")
+		releaseall
+	}
+	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
+	{
+		lockall
+    	showmonpic(SPECIES_TEPIG, 10, 3)
+    	playmoncry(SPECIES_TEPIG, CRY_MODE_ENCOUNTER)
+    	waitmoncry
+    	msgbox("It's a TEPIG! Do you want to take it?", MSGBOX_YESNO)
+    	if(var(VAR_RESULT) == YES)
+    	{
+        	hidemonpic
+        	playfanfare(MUS_OBTAIN_ITEM)
+        	removeobject(LOCALID_PKBALL3)
+        	givemon(SPECIES_TEPIG,5)
+        	call(EnablePokemonMenu)
+        	msgbox("You got a TEPIG")
+			setflag(PKBALL3)
+        	waitfanfare
+        	call(NicknamePartyMon)
+        	releaseall
+    	}
+    	else {
+        	msgbox(format("BIRCH: It's ok! Go check the other POKÉMON"))
+        	hidemonpic
+    	}
+    	waitmessage
+    	releaseall
+	}
+	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
+	{
+		lockall
+		msgbox("I already got my POKÉMON")
+		releaseall
+	}
+	
+}
+
+script EnablePokemonMenu {
+    setflag(FLAG_ADVENTURE_STARTED)
+    setflag(FLAG_SYS_POKEMON_GET)
+}
+
+script NicknamePartyMon{
+    msgbox("Do you want to nickname it?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+script GiveDexAndPokeMenu {
+    if(!flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)){
+        playfanfare(MUS_OBTAIN_ITEM)
+    	message("{PLAYER} received the POKéDEX!$")
+    	waitfanfare
+        closemessage
+    	setflag(FLAG_SYS_POKEDEX_GET)
+        setflag(FLAG_ADVENTURE_STARTED)
+    	special(SetUnlockedPokedexFlags)
+	    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    	setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+        setflag(FLAG_SYS_NATIONAL_DEX)
+    	special(EnableNationalPokedex)
+        msgbox(format("BIRCH: This is a POKÉDEX, it will catalog all POKÉMON you meet and catch\pBIRCH: POKÉMON are very mysterious and fun creatures but take care where you search for them.\pBIRCH: Usually you will find stronger and scarier POKÉMON deep in Caves.\pBIRCH: Also take these with you"))
+        giveitem(ITEM_POKE_BALL, 5)
+        msgbox(format("BIRCH:These allow you to catch your own POKÉMON in tall grass so you can collect research for the POKÉDEX\pBIRCH: I have one more very important thing to say...\pBIRCH: Have fun out there!"))
+        waitmessage
+        release
+	}
+}

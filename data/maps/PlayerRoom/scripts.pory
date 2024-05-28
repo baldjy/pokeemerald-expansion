@@ -1,0 +1,7 @@
+mapscripts PlayerRoom_MapScripts {
+    MAP_SCRIPT_ON_LOAD: RunningShoes
+}
+
+script RunningShoes {
+    setflag(FLAG_RECEIVED_RUNNING_SHOES)
+}

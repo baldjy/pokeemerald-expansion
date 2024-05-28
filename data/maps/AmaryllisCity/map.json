@@ -1,0 +1,316 @@
+{
+  "id": "MAP_AMARYLLIS_CITY",
+  "name": "AmaryllisCity",
+  "layout": "LAYOUT_AMARYLLIS_CITY",
+  "music": "MUS_EVOLUTION_INTRO",
+  "region_map_section": "MAPSEC_FARAWAY_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE610",
+      "offset": 18,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE611",
+      "offset": 52,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE614",
+      "offset": 10,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_MOONLIGHT_LAKE",
+      "offset": 14,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
+      "x": 38,
+      "y": 54,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 32,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "x": 63,
+      "y": 66,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "x": 51,
+      "y": 53,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 29,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 73,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 13,
+      "y": 63,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 52,
+      "y": 75,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 22,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "x": 54,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "x": 79,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 41,
+      "y": 60,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_POKECENTER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_GYM_HALL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 79,
+      "y": 69,
+      "elevation": 0,
+      "dest_map": "MAP_STRENGHT_SCHOOL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_STATION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 30,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 37,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 55,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 61,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 73,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 80,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 74,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 74,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 55,
+      "y": 74,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 60,
+      "y": 74,
+      "elevation": 0,
+      "dest_map": "MAP_AMARYLLIS_CITY",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

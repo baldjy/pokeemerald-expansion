@@ -1,0 +1,44 @@
+mapscripts PlayerHouse_MapScripts {
+}
+script DontLeaveMom {
+	if(!flag(MAMMATALK)){
+		msgbox("I should talk to mom before I leave")
+		applymovement(OBJ_EVENT_ID_PLAYER,TestMove)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		releaseall
+		end
+	}
+	else{
+		releaseall
+		end
+	}
+}
+
+script MomTalk {
+	if(!flag(MAMMATALK)){
+	faceplayer
+	lockall
+	msgbox(format("MOM: Hi dear! Your father just called.\pMOM: He asked me to tell you to meet him at the lab\pMOM: I am so glad we moved in here, your dad was very excited about his new research\pMOM: Oh I was about to gorget!\pMOM: Your Father and I Bought you this gift for you to celebrate our moving!"))
+	playfanfare(MUS_OBTAIN_ITEM) 
+	message("{PLAYER} received the POKéNAV!$")
+	waitfanfare
+	setflag(FLAG_SYS_POKENAV_GET)
+	setflag(FLAG_RECEIVED_POKENAV)
+	setflag(FLAG_RECEIVED_RUNNING_SHOES)
+	msgbox(format("MOM: Now go on, don't leave your father waiting for so long!"))
+	setflag(MAMMATALK)
+	releaseall
+	end	
+} else{
+	faceplayer
+	lockall
+	msgbox(format("MOM: Now go on, don't leave your father waiting for so long!"))
+	releaseall
+	end	
+}
+}
+
+movement TestMove {
+	walk_up
+	step_end
+}

@@ -79,6 +79,7 @@ static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
 static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
 static bool32 IsValidLocationForVsSeeker(void);
+static void ItemUseCB_BikeTools(u8);
 
 // EWRAM variables
 EWRAM_DATA static void(*sItemUseOnFieldCB)(u8 taskId) = NULL;
@@ -251,7 +252,37 @@ void ItemUseOutOfBattle_Bike(u8 taskId)
             DisplayDadsAdviceCannotUseItemMessage(taskId, tUsingRegisteredKeyItem);
     }
 }
+extern u8 ChangeBikes[];
 
+void ItemUseOutOfBattle_BikeTools(u8 TaskId)
+{
+    if (!gTasks[TaskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseCB_BikeTools;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(TaskId);
+    }
+    else
+    {
+        sItemUseOnFieldCB = ItemUseCB_BikeTools;
+        SetUpItemUseOnFieldCallback(TaskId);
+    }
+}
+
+void ItemUseCB_BikeTools(u8 TaskId)
+{
+    LockPlayerFieldControls();
+    //if on bike
+    if(!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ON_FOOT)){
+    if (ItemId_GetSecondaryId(gSpecialVar_ItemId) == MACH_BIKE)
+        GetOnOffBike(PLAYER_AVATAR_FLAG_MACH_BIKE);
+    else // ACRO_BIKE
+        GetOnOffBike(PLAYER_AVATAR_FLAG_ACRO_BIKE);
+        }
+    ScriptContext_SetupScript(ChangeBikes);
+    DestroyTask(TaskId);
+}
 static void ItemUseOnFieldCB_Bike(u8 taskId)
 {
     if (ItemId_GetSecondaryId(gSpecialVar_ItemId) == MACH_BIKE)
@@ -1254,11 +1285,11 @@ bool32 CannotUseItemsInBattle(u16 itemId, struct Pokemon *mon)
             cannotUse = TRUE;
         break;
     case EFFECT_ITEM_RESTORE_PP:
-        if (ItemId_GetEffect(itemId)[4] == ITEM4_HEAL_PP)
+        if (ItemId_GetEffect(itemId)[6] == ITEM4_HEAL_PP)
         {
             for (i = 0; i < MAX_MON_MOVES; i++)
             {
-                if (GetMonData(mon, MON_DATA_PP1 + i) < CalculatePPWithBonus(GetMonData(mon, MON_DATA_MOVE1 + i), GetMonData(mon, MON_DATA_PP_BONUSES), i))
+                if (GetMonData(mon, MON_DATA_PP1 + i) < CalculatePPWithBonus(GetMonData(mon, MON_DATA_MOVE1 + i), GetMonData(mon, MON_DATA_PP_BONUSES), i));
                     break;
             }
             if (i == MAX_MON_MOVES)

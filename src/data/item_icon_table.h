@@ -860,7 +860,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_FRESH_START_MOCHI] =  {gItemIcon_Mochi, gItemIconPalette_FreshStartMochi},
     [ITEM_GLIMMERING_CHARM] = {gItemIcon_GlimmeringCharm, gItemIconPalette_GlimmeringCharm},
     [ITEM_METAL_ALLOY] =  {gItemIcon_MetalAlloy, gItemIconPalette_MetalAlloy},
-    [ITEM_STELLAR_TERA_SHARD] = {gItemIcon_StellarTeraShard, gItemIconPalette_StellarTeraShard},
+    [ITEM_STELLAR_TERA_SHARD] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark}, //{gItemIcon_TeraShard, gItemIconPalette_StellarTeraShard},
     [ITEM_JUBILIFE_MUFFIN] = {gItemIcon_JubilifeMuffin, gItemIconPalette_JubilifeMuffin},
     [ITEM_REMEDY] = {gItemIcon_Remedy, gItemIconPalette_Remedy},
     [ITEM_FINE_REMEDY] = {gItemIcon_FineRemedy, gItemIconPalette_FineRemedy},
@@ -873,6 +873,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SWAP_SNACK] = {gItemIcon_SwapSnack, gItemIconPalette_SwapSnack},
     [ITEM_TWICE_SPICED_RADISH] = {gItemIcon_TwiceSpicedRadish, gItemIconPalette_TwiceSpicedRadish},
     [ITEM_POKESHI_DOLL] = {gItemIcon_PokeshiDoll, gItemIconPalette_PokeshiDoll},
+    [ITEM_BIKETOOLBOX] = {gItemIcon_CoinCase, gItemIconPalette_CoinCase},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
