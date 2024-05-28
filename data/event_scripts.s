@@ -1241,3 +1241,27 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/GrandportStation/scripts.inc"
 
 	.include "data/maps/BikeHouse/scripts.inc"
+
+	.include "data/maps/GraphiteCave_B1F/scripts.inc"
+
+	.include "data/maps/DuskForest1F/scripts.inc"
+
+	.include "data/maps/DuskForest2F/scripts.inc"
+
+	.include "data/maps/DuskForest3F/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/WhiteShoreCave/scripts.inc"
+
+	.include "data/maps/WhiteShoreCaveB3F/scripts.inc"
+
+	.include "data/maps/TatiocaninCave1F/scripts.inc"
+
+	.include "data/maps/SunBreathCave/scripts.inc"
+
+	.include "data/maps/SunBreathCaveB3F/scripts.inc"
+
+	.include "data/maps/Route406_RiverPassage/scripts.inc"
+
+	.include "data/maps/RosethornUpperPart/scripts.inc"

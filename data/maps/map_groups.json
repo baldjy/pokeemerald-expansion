@@ -147,7 +147,9 @@
     "Route619",
     "FifthCity",
     "MoonlightLake",
-    "RedDustTown"
+    "RedDustTown",
+    "Route406_RiverPassage",
+    "RosethornUpperPart"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -487,7 +489,21 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "GraphiteCaveEntrance",
+    "GraphiteCave_B1F",
+    "GraphiteCaveB2F",
+    "GraphiteCave_B3F",
+    "GraphiteCaveLegendaryArea",
+    "DuskForest1F",
+    "DuskForest2F",
+    "DuskForest3F",
+    "NewMap1",
+    "WhiteShoreCave",
+    "WhiteShoreCaveB3F",
+    "TatiocaninCave1F",
+    "SunBreathCave",
+    "SunBreathCaveB3F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -5260,6 +5260,166 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/BikeHouse/border.bin",
       "blockdata_filepath": "data/layouts/BikeHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAPHITE_CAVE_ENTRANCE",
+      "name": "GraphiteCaveEntrance_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GraphiteCaveEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/GraphiteCaveEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAPHITE_CAVE_B1F",
+      "name": "GraphiteCave_B1F_Layout",
+      "width": 32,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GraphiteCave_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/GraphiteCave_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAPHITE_CAVE_B2F",
+      "name": "GraphiteCaveB2F_Layout",
+      "width": 32,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GraphiteCaveB2F/border.bin",
+      "blockdata_filepath": "data/layouts/GraphiteCaveB2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAPHITE_CAVE_B3F",
+      "name": "GraphiteCave_B3F_Layout",
+      "width": 32,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GraphiteCave_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/GraphiteCave_B3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAPHITE_CAVE_LEGENDARY_AREA",
+      "name": "GraphiteCaveLegendaryArea_Layout",
+      "width": 11,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GraphiteCaveLegendaryArea/border.bin",
+      "blockdata_filepath": "data/layouts/GraphiteCaveLegendaryArea/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSK_FOREST1F",
+      "name": "DuskForest1F_Layout",
+      "width": 38,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DuskForest1F/border.bin",
+      "blockdata_filepath": "data/layouts/DuskForest1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSK_FOREST2F",
+      "name": "DuskForest2F_Layout",
+      "width": 38,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DuskForest2F/border.bin",
+      "blockdata_filepath": "data/layouts/DuskForest2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSK_FOREST3F",
+      "name": "DuskForest3F_Layout",
+      "width": 38,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/DuskForest3F/border.bin",
+      "blockdata_filepath": "data/layouts/DuskForest3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 60,
+      "height": 54,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITE_SHORE_CAVE",
+      "name": "WhiteShoreCave_Layout",
+      "width": 32,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WhiteShoreCave/border.bin",
+      "blockdata_filepath": "data/layouts/WhiteShoreCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITE_SHORE_CAVE_B3F",
+      "name": "WhiteShoreCaveB3F_Layout",
+      "width": 32,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WhiteShoreCaveB3F/border.bin",
+      "blockdata_filepath": "data/layouts/WhiteShoreCaveB3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TATIOCANIN_CAVE1F",
+      "name": "TatiocaninCave1F_Layout",
+      "width": 32,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/TatiocaninCave1F/border.bin",
+      "blockdata_filepath": "data/layouts/TatiocaninCave1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUN_BREATH_CAVE",
+      "name": "SunBreathCave_Layout",
+      "width": 38,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SunBreathCave/border.bin",
+      "blockdata_filepath": "data/layouts/SunBreathCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUN_BREATH_CAVE_B3F",
+      "name": "SunBreathCaveB3F_Layout",
+      "width": 56,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SunBreathCaveB3F/border.bin",
+      "blockdata_filepath": "data/layouts/SunBreathCaveB3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE406_RIVER_PASSAGE",
+      "name": "Route406_RiverPassage_Layout",
+      "width": 26,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route406_RiverPassage/border.bin",
+      "blockdata_filepath": "data/layouts/Route406_RiverPassage/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROSETHORN_UPPER_PART",
+      "name": "RosethornUpperPart_Layout",
+      "width": 42,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/RosethornUpperPart/border.bin",
+      "blockdata_filepath": "data/layouts/RosethornUpperPart/map.bin"
     }
   ]
 }
