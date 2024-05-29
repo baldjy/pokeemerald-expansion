@@ -23,3 +23,10 @@ script FisherTalk{
         end 
     }
 } 
+
+script SurfSchoolSign{
+        lockall
+        msgbox(format("Blue Pearl Surf School\nKawabanga mah dudes!"))
+        releaseall
+        end 
+    }

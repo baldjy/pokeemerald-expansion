@@ -119,57 +119,6 @@ MachToAcro::
 	end
 
 
-TestMoveTeach::
-# 67 "data/maps/BikeHouse/scripts.pory"
-	lockall
-# 68 "data/maps/BikeHouse/scripts.pory"
-	showmoneybox 0, 0
-# 69 "data/maps/BikeHouse/scripts.pory"
-	msgbox TestMoveTeach_Text_0, MSGBOX_YESNO
-# 70 "data/maps/BikeHouse/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq TestMoveTeach_2
-TestMoveTeach_1:
-# 86 "data/maps/BikeHouse/scripts.pory"
-	releaseall
-	return
-
-TestMoveTeach_2:
-# 71 "data/maps/BikeHouse/scripts.pory"
-	checkmoney 100
-# 72 "data/maps/BikeHouse/scripts.pory"
-	compare VAR_RESULT, TRUE
-	goto_if_eq TestMoveTeach_4
-# 81 "data/maps/BikeHouse/scripts.pory"
-	compare VAR_RESULT, FALSE
-	goto_if_eq TestMoveTeach_5
-	goto TestMoveTeach_1
-
-TestMoveTeach_4:
-# 73 "data/maps/BikeHouse/scripts.pory"
-	removemoney 100
-# 74 "data/maps/BikeHouse/scripts.pory"
-	updatemoneybox
-# 75 "data/maps/BikeHouse/scripts.pory"
-	playse SE_SELECT
-# 76 "data/maps/BikeHouse/scripts.pory"
-	waitse
-# 77 "data/maps/BikeHouse/scripts.pory"
-	hidemoneybox
-# 78 "data/maps/BikeHouse/scripts.pory"
-	setvar VAR_0x8005, MOVE_SURF
-# 79 "data/maps/BikeHouse/scripts.pory"
-	call MoveTutor_EventScript_OpenPartyMenu
-	goto TestMoveTeach_1
-
-TestMoveTeach_5:
-# 82 "data/maps/BikeHouse/scripts.pory"
-	hidemoneybox
-# 83 "data/maps/BikeHouse/scripts.pory"
-	msgbox TestMoveTeach_Text_1
-	goto TestMoveTeach_1
-
-
 BikerTalk_Text_0:
 # 11 "data/maps/BikeHouse/scripts.pory"
 	.string "Hey kid! You look like someone who\n"
@@ -194,12 +143,3 @@ BikerTalk_Text_3:
 ChangeBikes_Text_0:
 # 43 "data/maps/BikeHouse/scripts.pory"
 	.string "Let's work on my bike$"
-
-TestMoveTeach_Text_0:
-# 69 "data/maps/BikeHouse/scripts.pory"
-	.string "Do you want to teach SURF to a\n"
-	.string "POKéMON?$"
-
-TestMoveTeach_Text_1:
-# 83 "data/maps/BikeHouse/scripts.pory"
-	.string "More Gold is required$"
