@@ -25,6 +25,7 @@ script MomTalk {
 	setflag(FLAG_SYS_POKENAV_GET)
 	setflag(FLAG_RECEIVED_POKENAV)
 	setflag(FLAG_RECEIVED_RUNNING_SHOES)
+	setflag(FLAG_SYS_B_DASH)
 	msgbox(format("MOM: Now go on, don't leave your father waiting for so long!"))
 	setflag(MAMMATALK)
 	releaseall

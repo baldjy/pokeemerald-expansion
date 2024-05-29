@@ -12,6 +12,7 @@ script BikerTalk{
         if(var(VAR_RESULT) == YES){
             msgbox(format("I KNEW IT!\pTake this and chase your greatest rider dream!"))
             setflag(FLAG_RECEIVED_RUNNING_SHOES)
+            setflag(FLAG_SYS_B_DASH)
             giveitem(ITEM_ACRO_BIKE)
             giveitem(ITEM_BIKETOOLBOX)
             msgbox(format("Now go for the big roads! Don't let'em waiting."))

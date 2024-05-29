@@ -7,5 +7,7 @@ PlayerRoom_MapScripts::
 RunningShoes::
 # 6 "data/maps/PlayerRoom/scripts.pory"
 	setflag FLAG_RECEIVED_RUNNING_SHOES
+# 7 "data/maps/PlayerRoom/scripts.pory"
+	setflag FLAG_SYS_B_DASH
 	return
 

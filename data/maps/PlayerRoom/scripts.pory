@@ -4,4 +4,5 @@ mapscripts PlayerRoom_MapScripts {
 
 script RunningShoes {
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
+    setflag(FLAG_SYS_B_DASH)
 }

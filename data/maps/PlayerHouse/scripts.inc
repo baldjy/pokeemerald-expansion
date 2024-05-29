@@ -24,13 +24,13 @@ DontLeaveMom_1:
 MomTalk::
 # 18 "data/maps/PlayerHouse/scripts.pory"
 	goto_if_unset MAMMATALK, MomTalk_1
-# 33 "data/maps/PlayerHouse/scripts.pory"
-	faceplayer
 # 34 "data/maps/PlayerHouse/scripts.pory"
-	lockall
+	faceplayer
 # 35 "data/maps/PlayerHouse/scripts.pory"
-	msgbox MomTalk_Text_2
+	lockall
 # 36 "data/maps/PlayerHouse/scripts.pory"
+	msgbox MomTalk_Text_2
+# 37 "data/maps/PlayerHouse/scripts.pory"
 	releaseall
 	end
 
@@ -54,19 +54,21 @@ MomTalk_1:
 # 27 "data/maps/PlayerHouse/scripts.pory"
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 # 28 "data/maps/PlayerHouse/scripts.pory"
-	msgbox MomTalk_Text_2
+	setflag FLAG_SYS_B_DASH
 # 29 "data/maps/PlayerHouse/scripts.pory"
-	setflag MAMMATALK
+	msgbox MomTalk_Text_2
 # 30 "data/maps/PlayerHouse/scripts.pory"
+	setflag MAMMATALK
+# 31 "data/maps/PlayerHouse/scripts.pory"
 	releaseall
 	end
 
 
-# 41 "data/maps/PlayerHouse/scripts.pory"
-TestMove:
 # 42 "data/maps/PlayerHouse/scripts.pory"
-	walk_up
+TestMove:
 # 43 "data/maps/PlayerHouse/scripts.pory"
+	walk_up
+# 44 "data/maps/PlayerHouse/scripts.pory"
 	step_end
 
 DontLeaveMom_Text_0:
@@ -90,6 +92,6 @@ MomTalk_Text_1:
 	.string "{PLAYER} received the POKéNAV!$"
 
 MomTalk_Text_2:
-# 28 "data/maps/PlayerHouse/scripts.pory"
+# 29 "data/maps/PlayerHouse/scripts.pory"
 	.string "MOM: Now go on, don't leave your father\n"
 	.string "waiting for so long!$"
