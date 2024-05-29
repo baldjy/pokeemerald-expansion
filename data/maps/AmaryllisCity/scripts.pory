@@ -1,0 +1,8 @@
+mapscripts AmaryllisCity_MapScripts {}
+
+script StrengthchoolSign{
+        lockall
+        msgbox(format("Amaryllis STRENGTH School"))
+        releaseall
+        end 
+    }
