@@ -45,6 +45,16 @@ FisherTalk_5:
 	goto FisherTalk_4
 
 
+SurfSchoolSign::
+# 28 "data/maps/BluePearlCity/scripts.pory"
+	lockall
+# 29 "data/maps/BluePearlCity/scripts.pory"
+	msgbox SurfSchoolSign_Text_0
+# 30 "data/maps/BluePearlCity/scripts.pory"
+	releaseall
+	end
+
+
 FisherTalk_Text_0:
 # 8 "data/maps/BluePearlCity/scripts.pory"
 	.string "Hey kid! You look like someone who\n"
@@ -65,3 +75,8 @@ FisherTalk_Text_3:
 # 14 "data/maps/BluePearlCity/scripts.pory"
 	.string "Guess I was wrong...\p"
 	.string "Let me know if you change your mind$"
+
+SurfSchoolSign_Text_0:
+# 29 "data/maps/BluePearlCity/scripts.pory"
+	.string "Blue Pearl Surf School\n"
+	.string "Kawabanga mah dudes!$"

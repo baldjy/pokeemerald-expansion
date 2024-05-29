@@ -1,1 +1,24 @@
 mapscripts SurfSchool_MapScripts {}
+
+script TeachSurf {
+    lockall
+    showmoneybox(0,0)
+    msgbox(format("Do you want to teach SURF to a POKéMON?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        checkmoney(100)
+        if(var(VAR_RESULT)==TRUE){
+        removemoney(100)
+        updatemoneybox
+        playse(SE_SELECT)
+        waitse
+        hidemoneybox
+        setvar(VAR_0x8005, MOVE_SURF)
+        call(MoveTutor_EventScript_OpenPartyMenu)
+    }
+        elif(var(VAR_RESULT)==FALSE){
+        hidemoneybox
+        msgbox(format("More Gold is required"))
+    }
+}
+releaseall
+}
