@@ -1244,6 +1244,14 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/GraphiteCave_B1F/scripts.inc"
 
+	.include "data/maps/GraphiteCave_B3F/scripts.inc"
+
+	.include "data/maps/GraphiteCaveB2F/scripts.inc"
+
+	.include "data/maps/GraphiteCaveEntrance/scripts.inc"
+	
+	.include "data/maps/GraphiteCaveLegendaryArea/scripts.inc"
+
 	.include "data/maps/DuskForest1F/scripts.inc"
 
 	.include "data/maps/DuskForest2F/scripts.inc"
