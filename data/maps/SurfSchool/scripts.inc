@@ -13,7 +13,7 @@ TeachSurf::
 	compare VAR_RESULT, YES
 	goto_if_eq TeachSurf_2
 TeachSurf_1:
-# 23 "data/maps/SurfSchool/scripts.pory"
+# 24 "data/maps/SurfSchool/scripts.pory"
 	releaseall
 	return
 
@@ -22,13 +22,16 @@ TeachSurf_2:
 	checkmoney 100
 # 9 "data/maps/SurfSchool/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq TeachSurf_4
+	goto_if_eq TeachSurf_5
 # 18 "data/maps/SurfSchool/scripts.pory"
 	compare VAR_RESULT, FALSE
-	goto_if_eq TeachSurf_5
+	goto_if_eq TeachSurf_6
+TeachSurf_4:
+# 22 "data/maps/SurfSchool/scripts.pory"
+	msgbox TeachSurf_Text_2
 	goto TeachSurf_1
 
-TeachSurf_4:
+TeachSurf_5:
 # 10 "data/maps/SurfSchool/scripts.pory"
 	removemoney 100
 # 11 "data/maps/SurfSchool/scripts.pory"
@@ -43,14 +46,14 @@ TeachSurf_4:
 	setvar VAR_0x8005, MOVE_SURF
 # 16 "data/maps/SurfSchool/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto TeachSurf_1
+	goto TeachSurf_4
 
-TeachSurf_5:
+TeachSurf_6:
 # 19 "data/maps/SurfSchool/scripts.pory"
 	hidemoneybox
 # 20 "data/maps/SurfSchool/scripts.pory"
 	msgbox TeachSurf_Text_1
-	goto TeachSurf_1
+	goto TeachSurf_4
 
 
 TeachSurf_Text_0:
@@ -61,3 +64,7 @@ TeachSurf_Text_0:
 TeachSurf_Text_1:
 # 20 "data/maps/SurfSchool/scripts.pory"
 	.string "More Gold is required$"
+
+TeachSurf_Text_2:
+# 22 "data/maps/SurfSchool/scripts.pory"
+	.string "Please come again!$"

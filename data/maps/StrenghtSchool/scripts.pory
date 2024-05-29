@@ -19,6 +19,7 @@ script TeachStrength {
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
+    msgbox(format("Please come again!"))
 }
 releaseall
 }

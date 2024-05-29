@@ -13,7 +13,7 @@ TeachStrength::
 	compare VAR_RESULT, YES
 	goto_if_eq TeachStrength_2
 TeachStrength_1:
-# 23 "data/maps/StrenghtSchool/scripts.pory"
+# 24 "data/maps/StrenghtSchool/scripts.pory"
 	releaseall
 	return
 
@@ -22,13 +22,16 @@ TeachStrength_2:
 	checkmoney 100
 # 9 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq TeachStrength_4
+	goto_if_eq TeachStrength_5
 # 18 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, FALSE
-	goto_if_eq TeachStrength_5
+	goto_if_eq TeachStrength_6
+TeachStrength_4:
+# 22 "data/maps/StrenghtSchool/scripts.pory"
+	msgbox TeachStrength_Text_2
 	goto TeachStrength_1
 
-TeachStrength_4:
+TeachStrength_5:
 # 10 "data/maps/StrenghtSchool/scripts.pory"
 	removemoney 100
 # 11 "data/maps/StrenghtSchool/scripts.pory"
@@ -43,14 +46,14 @@ TeachStrength_4:
 	setvar VAR_0x8005, MOVE_STRENGTH
 # 16 "data/maps/StrenghtSchool/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto TeachStrength_1
+	goto TeachStrength_4
 
-TeachStrength_5:
+TeachStrength_6:
 # 19 "data/maps/StrenghtSchool/scripts.pory"
 	hidemoneybox
 # 20 "data/maps/StrenghtSchool/scripts.pory"
 	msgbox TeachStrength_Text_1
-	goto TeachStrength_1
+	goto TeachStrength_4
 
 
 TeachStrength_Text_0:
@@ -61,3 +64,7 @@ TeachStrength_Text_0:
 TeachStrength_Text_1:
 # 20 "data/maps/StrenghtSchool/scripts.pory"
 	.string "More Gold is required$"
+
+TeachStrength_Text_2:
+# 22 "data/maps/StrenghtSchool/scripts.pory"
+	.string "Please come again!$"
