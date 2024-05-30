@@ -23,3 +23,57 @@ script TeachStrength {
 }
 releaseall
 }
+
+script TeachCut {
+    lockall
+    showmoneybox(0,0)
+    msgbox(format("Do you want to teach CUT to a POKéMON?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        checkmoney(100)
+        if(var(VAR_RESULT)==TRUE){
+        removemoney(100)
+        updatemoneybox
+        playse(SE_SELECT)
+        waitse
+        hidemoneybox
+        setvar(VAR_0x8005, MOVE_CUT)
+        call(MoveTutor_EventScript_OpenPartyMenu)
+    }
+        elif(var(VAR_RESULT)==FALSE){
+        hidemoneybox
+        msgbox(format("More Gold is required"))
+    }
+    msgbox(format("Please come again!"))
+}
+releaseall
+}
+
+script TeachRockSmash {
+    lockall
+    showmoneybox(0,0)
+    msgbox(format("Do you want to teach ROCK SMASH to a POKéMON?"),MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        checkmoney(100)
+        if(var(VAR_RESULT)==TRUE){
+        removemoney(100)
+        updatemoneybox
+        playse(SE_SELECT)
+        waitse
+        hidemoneybox
+        setvar(VAR_0x8005, MOVE_ROCK_SMASH)
+        call(MoveTutor_EventScript_OpenPartyMenu)
+    }
+        elif(var(VAR_RESULT)==FALSE){
+        hidemoneybox
+        msgbox(format("More Gold is required"))
+    }
+    msgbox(format("Please come again!"))
+}
+releaseall
+}
+
+script MyStone {
+    lockall
+    msgbox(format("I'm using that one!"))
+    releaseall
+}

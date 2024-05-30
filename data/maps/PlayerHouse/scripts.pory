@@ -1,16 +1,52 @@
 mapscripts PlayerHouse_MapScripts {
 }
+const LOCALID_Mom = 1
+
+script Trigger1 {
+	setvar(VAR_TEMP_1, 1)
+	call(DontLeaveMom)
+}
+
+script Trigger2 {
+	setvar(VAR_TEMP_1, 2)
+	call(DontLeaveMom)
+}
+
+script Trigger3 {
+	setvar(VAR_TEMP_1, 3)
+	call(DontLeaveMom)
+}
+
+script Trigger4 {
+	setvar(VAR_TEMP_1, 4)
+	call(DontLeaveMom)
+}
+
 script DontLeaveMom {
 	if(!flag(MAMMATALK)){
-		msgbox("I should talk to mom before I leave")
-		applymovement(OBJ_EVENT_ID_PLAYER,TestMove)
-		waitmovement(OBJ_EVENT_ID_PLAYER)
+		applymovement(LOCALID_Mom, Common_Movement_FaceDown)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+		msgbox(format("MOM: Honey, before you leave, can you come here for a second?"))
 		releaseall
-		end
+		applymovement(LOCALID_Mom, Common_Movement_FaceRight)
+		switch(var(VAR_TEMP_1)){
+		case 1:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveTrigger1)
+		case 2:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveTrigger2)
+		case 3:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveTrigger3)
+		case 4:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveTrigger4)
+		}
+		applymovement(OBJ_EVENT_ID_PLAYER,MoveTrigger1)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+		applymovement(LOCALID_Mom, Common_Movement_FaceLeft)
+		call(MomTalk)
 	}
 	else{
 		releaseall
-		end
 	}
 }
 
@@ -18,14 +54,12 @@ script MomTalk {
 	if(!flag(MAMMATALK)){
 	faceplayer
 	lockall
-	msgbox(format("MOM: Hi dear! Your father just called.\pMOM: He asked me to tell you to meet him at the lab\pMOM: I am so glad we moved in here, your dad was very excited about his new research\pMOM: Oh I was about to gorget!\pMOM: Your Father and I Bought you this gift for you to celebrate our moving!"))
+	msgbox(format("MOM: Hi dear! Your father just called.\pMOM: He asked me to tell you to meet him at the lab\pMOM: I am so glad we moved in here, your dad was very excited about his new research\pMOM: Oh I was about to forget!\pMOM: Your Father and I Bought you this gift for you to celebrate our moving!"))
 	playfanfare(MUS_OBTAIN_ITEM) 
 	message("{PLAYER} received the POKéNAV!$")
 	waitfanfare
 	setflag(FLAG_SYS_POKENAV_GET)
 	setflag(FLAG_RECEIVED_POKENAV)
-	setflag(FLAG_RECEIVED_RUNNING_SHOES)
-	setflag(FLAG_SYS_B_DASH)
 	msgbox(format("MOM: Now go on, don't leave your father waiting for so long!"))
 	setflag(MAMMATALK)
 	releaseall
@@ -39,7 +73,30 @@ script MomTalk {
 }
 }
 
-movement TestMove {
+movement MoveTrigger1 {
+	walk_up*2
+	walk_right*3
+	walk_down
+	walk_right*3
+	walk_up*3
+	step_end
+}
+movement MoveTrigger2 {
 	walk_up
+	walk_right*2
+	walk_down
+	walk_right*3
+	walk_up*3
+	step_end
+}
+movement MoveTrigger3 {
+	walk_right*4
+	walk_up*3
+	step_end
+}
+movement MoveTrigger4 {
+	walk_up
+	walk_right*3
+	walk_up*3
 	step_end
 }

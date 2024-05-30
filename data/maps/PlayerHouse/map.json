@@ -59,7 +59,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "DontLeaveMom"
+      "script": "Trigger1"
     },
     {
       "type": "trigger",
@@ -68,7 +68,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "DontLeaveMom"
+      "script": "Trigger2"
     },
     {
       "type": "trigger",
@@ -77,7 +77,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "DontLeaveMom"
+      "script": "Trigger3"
     },
     {
       "type": "trigger",
@@ -86,7 +86,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "DontLeaveMom"
+      "script": "Trigger4"
     }
   ],
   "bg_events": [

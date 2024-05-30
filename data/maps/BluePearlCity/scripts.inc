@@ -78,5 +78,5 @@ FisherTalk_Text_3:
 
 SurfSchoolSign_Text_0:
 # 29 "data/maps/BluePearlCity/scripts.pory"
-	.string "Blue Pearl Surf School\n"
+	.string "Blue Pearl SURF School\n"
 	.string "Kawabanga mah dudes!$"
