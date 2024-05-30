@@ -11,8 +11,6 @@ script BikerTalk{
         msgbox(format("Hey kid! You look like someone who wants to be the greatest, am I right?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             msgbox(format("I KNEW IT!\pTake this and chase your greatest rider dream!"))
-            setflag(FLAG_RECEIVED_RUNNING_SHOES)
-            setflag(FLAG_SYS_B_DASH)
             giveitem(ITEM_ACRO_BIKE)
             giveitem(ITEM_BIKETOOLBOX)
             msgbox(format("Now go for the big roads! Don't let'em waiting."))
@@ -50,15 +48,13 @@ script ChangeBikes {
 	release
 }
 script AcroToMach{
-    //setvar(GetPlayerAvatarBike, 0)
-	removeitem(ITEM_ACRO_BIKE)
+    removeitem(ITEM_ACRO_BIKE)
     giveitem(ITEM_MACH_BIKE)
     releaseall
 	end
 }
 script MachToAcro{
-    //setvar(GetPlayerAvatarBike, 0)
-	removeitem(ITEM_MACH_BIKE)
+    removeitem(ITEM_MACH_BIKE)
     giveitem(ITEM_ACRO_BIKE)
     releaseall
 	end
