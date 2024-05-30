@@ -60,7 +60,7 @@ script TeachRockSmash {
         playse(SE_SELECT)
         waitse
         hidemoneybox
-        setvar(VAR_0x8005, MOVE_ROCKSMASH)
+        setvar(VAR_0x8005, MOVE_ROCK_SMASH)
         call(MoveTutor_EventScript_OpenPartyMenu)
     }
         elif(var(VAR_RESULT)==FALSE){

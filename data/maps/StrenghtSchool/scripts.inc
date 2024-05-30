@@ -151,7 +151,7 @@ TeachRockSmash_5:
 # 62 "data/maps/StrenghtSchool/scripts.pory"
 	hidemoneybox
 # 63 "data/maps/StrenghtSchool/scripts.pory"
-	setvar VAR_0x8005, MOVE_ROCKSMASH
+	setvar VAR_0x8005, MOVE_ROCK_SMASH
 # 64 "data/maps/StrenghtSchool/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
 	goto TeachRockSmash_4
