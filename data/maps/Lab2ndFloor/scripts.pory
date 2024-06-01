@@ -95,7 +95,6 @@ script PkBall1
 	}
 	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
-		lockall
     	showmonpic(SPECIES_TREECKO, 10, 3)
     	playmoncry(SPECIES_TREECKO, CRY_MODE_ENCOUNTER)
     	waitmoncry
@@ -111,7 +110,9 @@ script PkBall1
 			setflag(PKBALL1)
         	waitfanfare
         	call(NicknamePartyMon)
-        	releaseall
+        	applymovement(OBJ_EVENT_ID_PLAYER,PoketoBitch1)
+			waitmovement(OBJ_EVENT_ID_PLAYER)
+			call(BirchTalk)
     	}
     	else {
         	msgbox(format("BIRCH: It's ok! Go check the other POKÉMON"))
@@ -138,7 +139,6 @@ script PkBall2
 	}
 	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
-		lockall
     	showmonpic(SPECIES_FROAKIE, 10, 3)
     	playmoncry(SPECIES_FROAKIE, CRY_MODE_ENCOUNTER)
     	waitmoncry
@@ -154,7 +154,9 @@ script PkBall2
 			setflag(PKBALL2)
         	waitfanfare
         	call(NicknamePartyMon)
-        	releaseall
+        	applymovement(OBJ_EVENT_ID_PLAYER,PoketoBitch2)
+			waitmovement(OBJ_EVENT_ID_PLAYER)
+			call(BirchTalk)
     	}
     	else {
         	msgbox(format("BIRCH: It's ok! Go check the other POKÉMON"))
@@ -180,7 +182,6 @@ script PkBall3
 	}
 	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
-		lockall
     	showmonpic(SPECIES_TEPIG, 10, 3)
     	playmoncry(SPECIES_TEPIG, CRY_MODE_ENCOUNTER)
     	waitmoncry
@@ -196,7 +197,9 @@ script PkBall3
 			setflag(PKBALL3)
         	waitfanfare
         	call(NicknamePartyMon)
-        	releaseall
+        	applymovement(OBJ_EVENT_ID_PLAYER,PoketoBitch3)
+			waitmovement(OBJ_EVENT_ID_PLAYER)
+			call(BirchTalk)
     	}
     	else {
         	msgbox(format("BIRCH: It's ok! Go check the other POKÉMON"))
@@ -245,4 +248,22 @@ script GiveDexAndPokeMenu {
         waitmessage
         release
 	}
+}
+movement PoketoBitch1 {
+	walk_down*2
+	walk_left*2
+	face_up
+	step_end
+}
+movement PoketoBitch2 {
+	walk_down*2
+	walk_left*3
+	face_up
+	step_end
+}
+movement PoketoBitch3 {
+	walk_down*2
+	walk_left*4
+	face_up
+	step_end
 }
