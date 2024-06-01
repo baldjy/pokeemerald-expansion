@@ -192,11 +192,11 @@ PkBall1::
 # 96 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset PKBALL1, PkBall1_9
 PkBall1_5:
-# 123 "data/maps/Lab2ndFloor/scripts.pory"
+# 124 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL1, PkBall1_3
-# 123 "data/maps/Lab2ndFloor/scripts.pory"
+# 124 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL2, PkBall1_3
-# 123 "data/maps/Lab2ndFloor/scripts.pory"
+# 124 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL3, PkBall1_3
 	return
 
@@ -211,35 +211,33 @@ PkBall1_1:
 
 PkBall1_2:
 # 98 "data/maps/Lab2ndFloor/scripts.pory"
-	lockall
-# 99 "data/maps/Lab2ndFloor/scripts.pory"
 	showmonpic SPECIES_TREECKO, 10, 3
-# 100 "data/maps/Lab2ndFloor/scripts.pory"
+# 99 "data/maps/Lab2ndFloor/scripts.pory"
 	playmoncry SPECIES_TREECKO, CRY_MODE_ENCOUNTER
-# 101 "data/maps/Lab2ndFloor/scripts.pory"
+# 100 "data/maps/Lab2ndFloor/scripts.pory"
 	waitmoncry
-# 102 "data/maps/Lab2ndFloor/scripts.pory"
+# 101 "data/maps/Lab2ndFloor/scripts.pory"
 	msgbox PkBall1_Text_1, MSGBOX_YESNO
-# 103 "data/maps/Lab2ndFloor/scripts.pory"
+# 102 "data/maps/Lab2ndFloor/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PkBall1_16
-# 117 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox PkBall1_Text_3
 # 118 "data/maps/Lab2ndFloor/scripts.pory"
+	msgbox PkBall1_Text_3
+# 119 "data/maps/Lab2ndFloor/scripts.pory"
 	hidemonpic
 PkBall1_15:
-# 120 "data/maps/Lab2ndFloor/scripts.pory"
-	waitmessage
 # 121 "data/maps/Lab2ndFloor/scripts.pory"
+	waitmessage
+# 122 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
 PkBall1_3:
-# 125 "data/maps/Lab2ndFloor/scripts.pory"
-	lockall
 # 126 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox PkBall1_Text_4
+	lockall
 # 127 "data/maps/Lab2ndFloor/scripts.pory"
+	msgbox PkBall1_Text_4
+# 128 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
@@ -254,55 +252,57 @@ PkBall1_11:
 	goto PkBall1_5
 
 PkBall1_16:
-# 105 "data/maps/Lab2ndFloor/scripts.pory"
+# 104 "data/maps/Lab2ndFloor/scripts.pory"
 	hidemonpic
-# 106 "data/maps/Lab2ndFloor/scripts.pory"
+# 105 "data/maps/Lab2ndFloor/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 107 "data/maps/Lab2ndFloor/scripts.pory"
+# 106 "data/maps/Lab2ndFloor/scripts.pory"
 	removeobject 2
-# 108 "data/maps/Lab2ndFloor/scripts.pory"
+# 107 "data/maps/Lab2ndFloor/scripts.pory"
 	givemon SPECIES_TREECKO, 5
-# 109 "data/maps/Lab2ndFloor/scripts.pory"
+# 108 "data/maps/Lab2ndFloor/scripts.pory"
 	call EnablePokemonMenu
-# 110 "data/maps/Lab2ndFloor/scripts.pory"
+# 109 "data/maps/Lab2ndFloor/scripts.pory"
 	msgbox PkBall1_Text_2
-# 111 "data/maps/Lab2ndFloor/scripts.pory"
+# 110 "data/maps/Lab2ndFloor/scripts.pory"
 	setflag PKBALL1
-# 112 "data/maps/Lab2ndFloor/scripts.pory"
+# 111 "data/maps/Lab2ndFloor/scripts.pory"
 	waitfanfare
-# 113 "data/maps/Lab2ndFloor/scripts.pory"
+# 112 "data/maps/Lab2ndFloor/scripts.pory"
 	call NicknamePartyMon
+# 113 "data/maps/Lab2ndFloor/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PoketoBitch1
 # 114 "data/maps/Lab2ndFloor/scripts.pory"
-	releaseall
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 115 "data/maps/Lab2ndFloor/scripts.pory"
+	call BirchTalk
 	goto PkBall1_15
 
 
 PkBall2::
-# 134 "data/maps/Lab2ndFloor/scripts.pory"
+# 135 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset DADDYTALK, PkBall2_1
-# 139 "data/maps/Lab2ndFloor/scripts.pory"
+# 140 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset PKBALL1, PkBall2_9
 PkBall2_5:
-# 166 "data/maps/Lab2ndFloor/scripts.pory"
+# 168 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL1, PkBall2_3
-# 166 "data/maps/Lab2ndFloor/scripts.pory"
+# 168 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL2, PkBall2_3
-# 166 "data/maps/Lab2ndFloor/scripts.pory"
+# 168 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL3, PkBall2_3
 	return
 
 PkBall2_1:
-# 135 "data/maps/Lab2ndFloor/scripts.pory"
-	lockall
 # 136 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox PkBall1_Text_0
+	lockall
 # 137 "data/maps/Lab2ndFloor/scripts.pory"
+	msgbox PkBall1_Text_0
+# 138 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
 PkBall2_2:
-# 141 "data/maps/Lab2ndFloor/scripts.pory"
-	lockall
 # 142 "data/maps/Lab2ndFloor/scripts.pory"
 	showmonpic SPECIES_FROAKIE, 10, 3
 # 143 "data/maps/Lab2ndFloor/scripts.pory"
@@ -314,33 +314,33 @@ PkBall2_2:
 # 146 "data/maps/Lab2ndFloor/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PkBall2_16
-# 160 "data/maps/Lab2ndFloor/scripts.pory"
+# 162 "data/maps/Lab2ndFloor/scripts.pory"
 	msgbox PkBall1_Text_3
-# 161 "data/maps/Lab2ndFloor/scripts.pory"
+# 163 "data/maps/Lab2ndFloor/scripts.pory"
 	hidemonpic
 PkBall2_15:
-# 163 "data/maps/Lab2ndFloor/scripts.pory"
+# 165 "data/maps/Lab2ndFloor/scripts.pory"
 	waitmessage
-# 164 "data/maps/Lab2ndFloor/scripts.pory"
+# 166 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
 PkBall2_3:
-# 168 "data/maps/Lab2ndFloor/scripts.pory"
-	lockall
-# 169 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox PkBall1_Text_4
 # 170 "data/maps/Lab2ndFloor/scripts.pory"
+	lockall
+# 171 "data/maps/Lab2ndFloor/scripts.pory"
+	msgbox PkBall1_Text_4
+# 172 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
 PkBall2_9:
-# 139 "data/maps/Lab2ndFloor/scripts.pory"
+# 140 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset PKBALL2, PkBall2_11
 	goto PkBall2_5
 
 PkBall2_11:
-# 139 "data/maps/Lab2ndFloor/scripts.pory"
+# 140 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset PKBALL3, PkBall2_2
 	goto PkBall2_5
 
@@ -364,165 +364,222 @@ PkBall2_16:
 # 156 "data/maps/Lab2ndFloor/scripts.pory"
 	call NicknamePartyMon
 # 157 "data/maps/Lab2ndFloor/scripts.pory"
-	releaseall
+	applymovement OBJ_EVENT_ID_PLAYER, PoketoBitch2
+# 158 "data/maps/Lab2ndFloor/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 159 "data/maps/Lab2ndFloor/scripts.pory"
+	call BirchTalk
 	goto PkBall2_15
 
 
 PkBall3::
-# 176 "data/maps/Lab2ndFloor/scripts.pory"
+# 178 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset DADDYTALK, PkBall3_1
-# 181 "data/maps/Lab2ndFloor/scripts.pory"
+# 183 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset PKBALL1, PkBall3_9
 PkBall3_5:
-# 208 "data/maps/Lab2ndFloor/scripts.pory"
+# 211 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL1, PkBall3_3
-# 208 "data/maps/Lab2ndFloor/scripts.pory"
+# 211 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL2, PkBall3_3
-# 208 "data/maps/Lab2ndFloor/scripts.pory"
+# 211 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_set PKBALL3, PkBall3_3
 	return
 
 PkBall3_1:
-# 177 "data/maps/Lab2ndFloor/scripts.pory"
-	lockall
-# 178 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox PkBall1_Text_0
 # 179 "data/maps/Lab2ndFloor/scripts.pory"
+	lockall
+# 180 "data/maps/Lab2ndFloor/scripts.pory"
+	msgbox PkBall1_Text_0
+# 181 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
 PkBall3_2:
-# 183 "data/maps/Lab2ndFloor/scripts.pory"
-	lockall
-# 184 "data/maps/Lab2ndFloor/scripts.pory"
-	showmonpic SPECIES_TEPIG, 10, 3
 # 185 "data/maps/Lab2ndFloor/scripts.pory"
-	playmoncry SPECIES_TEPIG, CRY_MODE_ENCOUNTER
+	showmonpic SPECIES_TEPIG, 10, 3
 # 186 "data/maps/Lab2ndFloor/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_TEPIG, CRY_MODE_ENCOUNTER
 # 187 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox PkBall3_Text_0, MSGBOX_YESNO
+	waitmoncry
 # 188 "data/maps/Lab2ndFloor/scripts.pory"
+	msgbox PkBall3_Text_0, MSGBOX_YESNO
+# 189 "data/maps/Lab2ndFloor/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PkBall3_16
-# 202 "data/maps/Lab2ndFloor/scripts.pory"
+# 205 "data/maps/Lab2ndFloor/scripts.pory"
 	msgbox PkBall1_Text_3
-# 203 "data/maps/Lab2ndFloor/scripts.pory"
+# 206 "data/maps/Lab2ndFloor/scripts.pory"
 	hidemonpic
 PkBall3_15:
-# 205 "data/maps/Lab2ndFloor/scripts.pory"
+# 208 "data/maps/Lab2ndFloor/scripts.pory"
 	waitmessage
-# 206 "data/maps/Lab2ndFloor/scripts.pory"
+# 209 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
 PkBall3_3:
-# 210 "data/maps/Lab2ndFloor/scripts.pory"
+# 213 "data/maps/Lab2ndFloor/scripts.pory"
 	lockall
-# 211 "data/maps/Lab2ndFloor/scripts.pory"
+# 214 "data/maps/Lab2ndFloor/scripts.pory"
 	msgbox PkBall1_Text_4
-# 212 "data/maps/Lab2ndFloor/scripts.pory"
+# 215 "data/maps/Lab2ndFloor/scripts.pory"
 	releaseall
 	return
 
 PkBall3_9:
-# 181 "data/maps/Lab2ndFloor/scripts.pory"
+# 183 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset PKBALL2, PkBall3_11
 	goto PkBall3_5
 
 PkBall3_11:
-# 181 "data/maps/Lab2ndFloor/scripts.pory"
+# 183 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset PKBALL3, PkBall3_2
 	goto PkBall3_5
 
 PkBall3_16:
-# 190 "data/maps/Lab2ndFloor/scripts.pory"
-	hidemonpic
 # 191 "data/maps/Lab2ndFloor/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	hidemonpic
 # 192 "data/maps/Lab2ndFloor/scripts.pory"
-	removeobject 4
+	playfanfare MUS_OBTAIN_ITEM
 # 193 "data/maps/Lab2ndFloor/scripts.pory"
-	givemon SPECIES_TEPIG, 5
+	removeobject 4
 # 194 "data/maps/Lab2ndFloor/scripts.pory"
-	call EnablePokemonMenu
+	givemon SPECIES_TEPIG, 5
 # 195 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox PkBall3_Text_1
+	call EnablePokemonMenu
 # 196 "data/maps/Lab2ndFloor/scripts.pory"
-	setflag PKBALL3
+	msgbox PkBall3_Text_1
 # 197 "data/maps/Lab2ndFloor/scripts.pory"
-	waitfanfare
+	setflag PKBALL3
 # 198 "data/maps/Lab2ndFloor/scripts.pory"
-	call NicknamePartyMon
+	waitfanfare
 # 199 "data/maps/Lab2ndFloor/scripts.pory"
-	releaseall
+	call NicknamePartyMon
+# 200 "data/maps/Lab2ndFloor/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PoketoBitch3
+# 201 "data/maps/Lab2ndFloor/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 202 "data/maps/Lab2ndFloor/scripts.pory"
+	call BirchTalk
 	goto PkBall3_15
 
 
 EnablePokemonMenu::
-# 218 "data/maps/Lab2ndFloor/scripts.pory"
+# 221 "data/maps/Lab2ndFloor/scripts.pory"
 	setflag FLAG_ADVENTURE_STARTED
-# 219 "data/maps/Lab2ndFloor/scripts.pory"
+# 222 "data/maps/Lab2ndFloor/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 	return
 
 
 NicknamePartyMon::
-# 223 "data/maps/Lab2ndFloor/scripts.pory"
+# 226 "data/maps/Lab2ndFloor/scripts.pory"
 	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 224 "data/maps/Lab2ndFloor/scripts.pory"
+# 227 "data/maps/Lab2ndFloor/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknamePartyMon_1
 	return
 
 NicknamePartyMon_1:
-# 225 "data/maps/Lab2ndFloor/scripts.pory"
+# 228 "data/maps/Lab2ndFloor/scripts.pory"
 	call Common_EventScript_GetGiftMonPartySlot
-# 226 "data/maps/Lab2ndFloor/scripts.pory"
+# 229 "data/maps/Lab2ndFloor/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	return
 
 
 GiveDexAndPokeMenu::
-# 230 "data/maps/Lab2ndFloor/scripts.pory"
+# 233 "data/maps/Lab2ndFloor/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_POKEDEX_FROM_BIRCH, GiveDexAndPokeMenu_1
 	return
 
 GiveDexAndPokeMenu_1:
-# 231 "data/maps/Lab2ndFloor/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 232 "data/maps/Lab2ndFloor/scripts.pory"
-	message GiveDexAndPokeMenu_Text_0
-# 233 "data/maps/Lab2ndFloor/scripts.pory"
-	waitfanfare
 # 234 "data/maps/Lab2ndFloor/scripts.pory"
-	closemessage
+	playfanfare MUS_OBTAIN_ITEM
 # 235 "data/maps/Lab2ndFloor/scripts.pory"
-	setflag FLAG_SYS_POKEDEX_GET
+	message GiveDexAndPokeMenu_Text_0
 # 236 "data/maps/Lab2ndFloor/scripts.pory"
-	setflag FLAG_ADVENTURE_STARTED
+	waitfanfare
 # 237 "data/maps/Lab2ndFloor/scripts.pory"
-	special SetUnlockedPokedexFlags
+	closemessage
 # 238 "data/maps/Lab2ndFloor/scripts.pory"
-	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	setflag FLAG_SYS_POKEDEX_GET
 # 239 "data/maps/Lab2ndFloor/scripts.pory"
-	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
+	setflag FLAG_ADVENTURE_STARTED
 # 240 "data/maps/Lab2ndFloor/scripts.pory"
-	setflag FLAG_SYS_NATIONAL_DEX
+	special SetUnlockedPokedexFlags
 # 241 "data/maps/Lab2ndFloor/scripts.pory"
-	special EnableNationalPokedex
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 # 242 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox GiveDexAndPokeMenu_Text_1
+	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
 # 243 "data/maps/Lab2ndFloor/scripts.pory"
-	giveitem ITEM_POKE_BALL, 5
+	setflag FLAG_SYS_NATIONAL_DEX
 # 244 "data/maps/Lab2ndFloor/scripts.pory"
-	msgbox GiveDexAndPokeMenu_Text_2
+	special EnableNationalPokedex
 # 245 "data/maps/Lab2ndFloor/scripts.pory"
-	waitmessage
+	msgbox GiveDexAndPokeMenu_Text_1
 # 246 "data/maps/Lab2ndFloor/scripts.pory"
+	giveitem ITEM_POKE_BALL, 5
+# 247 "data/maps/Lab2ndFloor/scripts.pory"
+	msgbox GiveDexAndPokeMenu_Text_2
+# 248 "data/maps/Lab2ndFloor/scripts.pory"
+	waitmessage
+# 249 "data/maps/Lab2ndFloor/scripts.pory"
 	release
 	return
 
+
+# 252 "data/maps/Lab2ndFloor/scripts.pory"
+PoketoBitch1:
+# 253 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_down
+# 253 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_down
+# 254 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 254 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 255 "data/maps/Lab2ndFloor/scripts.pory"
+	face_up
+# 256 "data/maps/Lab2ndFloor/scripts.pory"
+	step_end
+
+# 258 "data/maps/Lab2ndFloor/scripts.pory"
+PoketoBitch2:
+# 259 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_down
+# 259 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_down
+# 260 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 260 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 260 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 261 "data/maps/Lab2ndFloor/scripts.pory"
+	face_up
+# 262 "data/maps/Lab2ndFloor/scripts.pory"
+	step_end
+
+# 264 "data/maps/Lab2ndFloor/scripts.pory"
+PoketoBitch3:
+# 265 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_down
+# 265 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_down
+# 266 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 266 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 266 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 266 "data/maps/Lab2ndFloor/scripts.pory"
+	walk_left
+# 267 "data/maps/Lab2ndFloor/scripts.pory"
+	face_up
+# 268 "data/maps/Lab2ndFloor/scripts.pory"
+	step_end
 
 DaddyTalk_Text_0:
 # 13 "data/maps/Lab2ndFloor/scripts.pory"
@@ -613,20 +670,20 @@ PkBall1_Text_0:
 	.string "I gotta talk to Dad first$"
 
 PkBall1_Text_1:
-# 102 "data/maps/Lab2ndFloor/scripts.pory"
+# 101 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "It's a TREECKO! Do you want to take it?$"
 
 PkBall1_Text_2:
-# 110 "data/maps/Lab2ndFloor/scripts.pory"
+# 109 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "You got a TREECKO$"
 
 PkBall1_Text_3:
-# 117 "data/maps/Lab2ndFloor/scripts.pory"
+# 118 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "BIRCH: It's ok! Go check the other\n"
 	.string "POKÉMON$"
 
 PkBall1_Text_4:
-# 126 "data/maps/Lab2ndFloor/scripts.pory"
+# 127 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "I already got my POKÉMON$"
 
 PkBall2_Text_0:
@@ -638,23 +695,23 @@ PkBall2_Text_1:
 	.string "You got a FROAKIE$"
 
 PkBall3_Text_0:
-# 187 "data/maps/Lab2ndFloor/scripts.pory"
+# 188 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "It's a TEPIG! Do you want to take it?$"
 
 PkBall3_Text_1:
-# 195 "data/maps/Lab2ndFloor/scripts.pory"
+# 196 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "You got a TEPIG$"
 
 NicknamePartyMon_Text_0:
-# 223 "data/maps/Lab2ndFloor/scripts.pory"
+# 226 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "Do you want to nickname it?$"
 
 GiveDexAndPokeMenu_Text_0:
-# 232 "data/maps/Lab2ndFloor/scripts.pory"
+# 235 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "{PLAYER} received the POKéDEX!$"
 
 GiveDexAndPokeMenu_Text_1:
-# 242 "data/maps/Lab2ndFloor/scripts.pory"
+# 245 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "BIRCH: This is a POKÉDEX, it will catalog\n"
 	.string "all POKÉMON you meet and catch\p"
 	.string "BIRCH: POKÉMON are very mysterious and\n"
@@ -665,7 +722,7 @@ GiveDexAndPokeMenu_Text_1:
 	.string "BIRCH: Also take these with you$"
 
 GiveDexAndPokeMenu_Text_2:
-# 244 "data/maps/Lab2ndFloor/scripts.pory"
+# 247 "data/maps/Lab2ndFloor/scripts.pory"
 	.string "BIRCH:These allow you to catch your\n"
 	.string "own POKÉMON in tall grass so you can\l"
 	.string "collect research for the POKÉDEX\p"
