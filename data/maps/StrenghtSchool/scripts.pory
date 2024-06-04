@@ -19,12 +19,12 @@ script TeachStrength {
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
-    if(var(VAR_RESULT) == NO){
+}
+elif(var(VAR_RESULT) == NO){
+    hidemoneybox
     msgbox(format("Please come again!"))
     releaseall
     }
-}
-releaseall
 }
 
 script TeachCut {
@@ -46,12 +46,12 @@ script TeachCut {
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
-    if(var(VAR_RESULT) == NO){
+   }
+elif(var(VAR_RESULT) == NO){
+    hidemoneybox
     msgbox(format("Please come again!"))
     releaseall
     }
-}
-releaseall
 }
 
 script TeachRockSmash {
@@ -73,12 +73,12 @@ script TeachRockSmash {
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
-    if(var(VAR_RESULT) == NO){
+    }
+    elif(var(VAR_RESULT) == NO){
+    hidemoneybox
     msgbox(format("Please come again!"))
     releaseall
     }
-}
-releaseall
 }
 
 script MyStone {

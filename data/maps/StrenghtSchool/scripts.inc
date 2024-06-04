@@ -11,13 +11,13 @@ TeachStrength::
 	msgbox TeachStrength_Text_0, MSGBOX_YESNO
 # 7 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, YES
+	goto_if_eq TeachStrength_1
+# 23 "data/maps/StrenghtSchool/scripts.pory"
+	compare VAR_RESULT, NO
 	goto_if_eq TeachStrength_2
-TeachStrength_1:
-# 27 "data/maps/StrenghtSchool/scripts.pory"
-	releaseall
 	return
 
-TeachStrength_2:
+TeachStrength_1:
 # 8 "data/maps/StrenghtSchool/scripts.pory"
 	checkmoney 100
 # 9 "data/maps/StrenghtSchool/scripts.pory"
@@ -26,11 +26,16 @@ TeachStrength_2:
 # 18 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq TeachStrength_6
-TeachStrength_4:
-# 22 "data/maps/StrenghtSchool/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq TeachStrength_9
-	goto TeachStrength_1
+	return
+
+TeachStrength_2:
+# 24 "data/maps/StrenghtSchool/scripts.pory"
+	hidemoneybox
+# 25 "data/maps/StrenghtSchool/scripts.pory"
+	msgbox TeachStrength_Text_2
+# 26 "data/maps/StrenghtSchool/scripts.pory"
+	releaseall
+	return
 
 TeachStrength_5:
 # 10 "data/maps/StrenghtSchool/scripts.pory"
@@ -47,21 +52,14 @@ TeachStrength_5:
 	setvar VAR_0x8005, MOVE_STRENGTH
 # 16 "data/maps/StrenghtSchool/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto TeachStrength_4
+	return
 
 TeachStrength_6:
 # 19 "data/maps/StrenghtSchool/scripts.pory"
 	hidemoneybox
 # 20 "data/maps/StrenghtSchool/scripts.pory"
 	msgbox TeachStrength_Text_1
-	goto TeachStrength_4
-
-TeachStrength_9:
-# 23 "data/maps/StrenghtSchool/scripts.pory"
-	msgbox TeachStrength_Text_2
-# 24 "data/maps/StrenghtSchool/scripts.pory"
-	releaseall
-	goto TeachStrength_1
+	return
 
 
 TeachCut::
@@ -73,13 +71,13 @@ TeachCut::
 	msgbox TeachCut_Text_0, MSGBOX_YESNO
 # 34 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, YES
+	goto_if_eq TeachCut_1
+# 50 "data/maps/StrenghtSchool/scripts.pory"
+	compare VAR_RESULT, NO
 	goto_if_eq TeachCut_2
-TeachCut_1:
-# 54 "data/maps/StrenghtSchool/scripts.pory"
-	releaseall
 	return
 
-TeachCut_2:
+TeachCut_1:
 # 35 "data/maps/StrenghtSchool/scripts.pory"
 	checkmoney 100
 # 36 "data/maps/StrenghtSchool/scripts.pory"
@@ -88,11 +86,16 @@ TeachCut_2:
 # 45 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq TeachCut_6
-TeachCut_4:
-# 49 "data/maps/StrenghtSchool/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq TeachCut_9
-	goto TeachCut_1
+	return
+
+TeachCut_2:
+# 51 "data/maps/StrenghtSchool/scripts.pory"
+	hidemoneybox
+# 52 "data/maps/StrenghtSchool/scripts.pory"
+	msgbox TeachStrength_Text_2
+# 53 "data/maps/StrenghtSchool/scripts.pory"
+	releaseall
+	return
 
 TeachCut_5:
 # 37 "data/maps/StrenghtSchool/scripts.pory"
@@ -109,21 +112,14 @@ TeachCut_5:
 	setvar VAR_0x8005, MOVE_CUT
 # 43 "data/maps/StrenghtSchool/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto TeachCut_4
+	return
 
 TeachCut_6:
 # 46 "data/maps/StrenghtSchool/scripts.pory"
 	hidemoneybox
 # 47 "data/maps/StrenghtSchool/scripts.pory"
 	msgbox TeachStrength_Text_1
-	goto TeachCut_4
-
-TeachCut_9:
-# 50 "data/maps/StrenghtSchool/scripts.pory"
-	msgbox TeachStrength_Text_2
-# 51 "data/maps/StrenghtSchool/scripts.pory"
-	releaseall
-	goto TeachCut_1
+	return
 
 
 TeachRockSmash::
@@ -135,13 +131,13 @@ TeachRockSmash::
 	msgbox TeachRockSmash_Text_0, MSGBOX_YESNO
 # 61 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, YES
+	goto_if_eq TeachRockSmash_1
+# 77 "data/maps/StrenghtSchool/scripts.pory"
+	compare VAR_RESULT, NO
 	goto_if_eq TeachRockSmash_2
-TeachRockSmash_1:
-# 81 "data/maps/StrenghtSchool/scripts.pory"
-	releaseall
 	return
 
-TeachRockSmash_2:
+TeachRockSmash_1:
 # 62 "data/maps/StrenghtSchool/scripts.pory"
 	checkmoney 100
 # 63 "data/maps/StrenghtSchool/scripts.pory"
@@ -150,11 +146,16 @@ TeachRockSmash_2:
 # 72 "data/maps/StrenghtSchool/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq TeachRockSmash_6
-TeachRockSmash_4:
-# 76 "data/maps/StrenghtSchool/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq TeachRockSmash_9
-	goto TeachRockSmash_1
+	return
+
+TeachRockSmash_2:
+# 78 "data/maps/StrenghtSchool/scripts.pory"
+	hidemoneybox
+# 79 "data/maps/StrenghtSchool/scripts.pory"
+	msgbox TeachStrength_Text_2
+# 80 "data/maps/StrenghtSchool/scripts.pory"
+	releaseall
+	return
 
 TeachRockSmash_5:
 # 64 "data/maps/StrenghtSchool/scripts.pory"
@@ -171,21 +172,14 @@ TeachRockSmash_5:
 	setvar VAR_0x8005, MOVE_ROCK_SMASH
 # 70 "data/maps/StrenghtSchool/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto TeachRockSmash_4
+	return
 
 TeachRockSmash_6:
 # 73 "data/maps/StrenghtSchool/scripts.pory"
 	hidemoneybox
 # 74 "data/maps/StrenghtSchool/scripts.pory"
 	msgbox TeachStrength_Text_1
-	goto TeachRockSmash_4
-
-TeachRockSmash_9:
-# 77 "data/maps/StrenghtSchool/scripts.pory"
-	msgbox TeachStrength_Text_2
-# 78 "data/maps/StrenghtSchool/scripts.pory"
-	releaseall
-	goto TeachRockSmash_1
+	return
 
 
 MyStone::
@@ -208,7 +202,7 @@ TeachStrength_Text_1:
 	.string "More Gold is required$"
 
 TeachStrength_Text_2:
-# 23 "data/maps/StrenghtSchool/scripts.pory"
+# 25 "data/maps/StrenghtSchool/scripts.pory"
 	.string "Please come again!$"
 
 TeachCut_Text_0:

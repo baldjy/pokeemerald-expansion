@@ -19,10 +19,10 @@ script TeachSurf {
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
-    if(var(VAR_RESULT) == NO){
+}
+elif(var(VAR_RESULT) == NO){
+    hidemoneybox
     msgbox(format("Please come again!"))
     releaseall
     }
-}
-releaseall
 }
