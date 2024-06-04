@@ -13,7 +13,7 @@ TeachSurf::
 	compare VAR_RESULT, YES
 	goto_if_eq TeachSurf_2
 TeachSurf_1:
-# 24 "data/maps/SurfSchool/scripts.pory"
+# 27 "data/maps/SurfSchool/scripts.pory"
 	releaseall
 	return
 
@@ -28,7 +28,8 @@ TeachSurf_2:
 	goto_if_eq TeachSurf_6
 TeachSurf_4:
 # 22 "data/maps/SurfSchool/scripts.pory"
-	msgbox TeachSurf_Text_2
+	compare VAR_RESULT, NO
+	goto_if_eq TeachSurf_9
 	goto TeachSurf_1
 
 TeachSurf_5:
@@ -55,6 +56,13 @@ TeachSurf_6:
 	msgbox TeachSurf_Text_1
 	goto TeachSurf_4
 
+TeachSurf_9:
+# 23 "data/maps/SurfSchool/scripts.pory"
+	msgbox TeachSurf_Text_2
+# 24 "data/maps/SurfSchool/scripts.pory"
+	releaseall
+	goto TeachSurf_1
+
 
 TeachSurf_Text_0:
 # 6 "data/maps/SurfSchool/scripts.pory"
@@ -66,5 +74,5 @@ TeachSurf_Text_1:
 	.string "More Gold is required$"
 
 TeachSurf_Text_2:
-# 22 "data/maps/SurfSchool/scripts.pory"
+# 23 "data/maps/SurfSchool/scripts.pory"
 	.string "Please come again!$"
