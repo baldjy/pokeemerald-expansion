@@ -9,11 +9,17 @@ script TeachStrength {
         if(var(VAR_RESULT)==TRUE){
         removemoney(100)
         updatemoneybox
-        playse(SE_SELECT)
+        playse(SE_SHOP)
         waitse
         hidemoneybox
         setvar(VAR_0x8005, MOVE_STRENGTH)
         call(MoveTutor_EventScript_OpenPartyMenu)
+        if(var(VAR_RESULT)==0)
+        {
+            addmoney(100)
+            msgbox(format("Please come again!"))
+            releaseall
+        }
     }
         elif(var(VAR_RESULT)==FALSE){
         hidemoneybox
@@ -36,11 +42,17 @@ script TeachCut {
         if(var(VAR_RESULT)==TRUE){
         removemoney(100)
         updatemoneybox
-        playse(SE_SELECT)
+        playse(SE_SHOP)
         waitse
         hidemoneybox
         setvar(VAR_0x8005, MOVE_CUT)
         call(MoveTutor_EventScript_OpenPartyMenu)
+        if(var(VAR_RESULT)==0)
+        {
+            addmoney(100)
+            msgbox(format("Please come again!"))
+            releaseall
+        }
     }
         elif(var(VAR_RESULT)==FALSE){
         hidemoneybox
@@ -63,11 +75,17 @@ script TeachRockSmash {
         if(var(VAR_RESULT)==TRUE){
         removemoney(100)
         updatemoneybox
-        playse(SE_SELECT)
+        playse(SE_SHOP)
         waitse
         hidemoneybox
         setvar(VAR_0x8005, MOVE_ROCK_SMASH)
         call(MoveTutor_EventScript_OpenPartyMenu)
+        if(var(VAR_RESULT)==0)
+        {
+            addmoney(100)
+            msgbox(format("Please come again!"))
+            releaseall
+        }
     }
         elif(var(VAR_RESULT)==FALSE){
         hidemoneybox
