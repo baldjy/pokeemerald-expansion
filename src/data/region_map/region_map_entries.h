@@ -6,9 +6,6 @@
 #define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 
 
-static const u8 sMapName_LITTLEROOT_TOWN[] = _("LITTLEROOT TOWN");
-static const u8 sMapName_OLDALE_TOWN[] = _("OLDALE TOWN");
-static const u8 sMapName_DEWFORD_TOWN[] = _("DEWFORD TOWN");
 static const u8 sMapName_LAVARIDGE_TOWN[] = _("LAVARIDGE TOWN");
 static const u8 sMapName_FALLARBOR_TOWN[] = _("FALLARBOR TOWN");
 static const u8 sMapName_VERDANTURF_TOWN[] = _("VERDANTURF TOWN");
@@ -199,12 +196,8 @@ static const u8 sMapName_DESERT_UNDERPASS[] = _("DESERT UNDERPASS");
 static const u8 sMapName_TRAINER_HILL[] = _("TRAINER HILL");
 static const u8 sMapName_ROSETHORN_CITY[] = _("ROSETHORN CITY");
 static const u8 sMapName_ROUTE_401[] = _("ROUTE 401");
-static const u8 sMapName_ROUTE_402[] = _("ROUTE 402");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
-    [MAPSEC_LITTLEROOT_TOWN] = { 4, 11, 1, 1, sMapName_LITTLEROOT_TOWN},
-    [MAPSEC_OLDALE_TOWN] = { 4, 9, 1, 1, sMapName_OLDALE_TOWN},
-    [MAPSEC_DEWFORD_TOWN] = { 2, 14, 1, 1, sMapName_DEWFORD_TOWN},
     [MAPSEC_LAVARIDGE_TOWN] = { 5, 3, 1, 1, sMapName_LAVARIDGE_TOWN},
     [MAPSEC_FALLARBOR_TOWN] = { 3, 0, 1, 1, sMapName_FALLARBOR_TOWN},
     [MAPSEC_VERDANTURF_TOWN] = { 4, 6, 1, 1, sMapName_VERDANTURF_TOWN},
@@ -416,8 +409,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_NAVEL_ROCK] = { 0, 0, 1, 1, sMapName_NAVEL_ROCK},
     [MAPSEC_TRAINER_HILL] = { 8, 4, 1, 1, sMapName_TRAINER_HILL},
     [MAPSEC_ROSETHORN_CITY] = { 3, 0, 1, 1, sMapName_ROSETHORN_CITY},
-    [MAPSEC_ROUTE_401] = { 1, 0, 2, 1, sMapName_ROUTE_401},
-    [MAPSEC_ROUTE_402] = { 4, 0, 2, 1, sMapName_ROUTE_402},
+    [MAPSEC_ROUTE_401] = { 4, 0, 2, 1, sMapName_ROUTE_401},
 };
 
 #endif // GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H

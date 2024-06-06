@@ -1,1 +1,21 @@
 mapscripts RosethornStation_MapScripts {}
+script RoseThornStationCall {
+    message("Welcome, where would you\nlike to travel?")
+    multichoice(25, 4, MULTI_CHOICE_STATION, 0)
+    closemessage
+    if(var(VAR_RESULT)==0)
+    {
+        msgbox(format("Have safe travels!"))
+        warp(MAP_ROSETHORN_STATION, 16, 2)
+    }
+    if(var(VAR_RESULT)==1)
+    {
+        msgbox(format("Have safe travels!"))
+        warp(MAP_GRANDPORT_STATION, 16, 2)
+    }
+    if(var(VAR_RESULT)==2)
+    {
+        msgbox(format("Have safe travels!"))
+        warp(MAP_AMARYLLIS_STATION, 16, 2)
+    }
+}
