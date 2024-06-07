@@ -11,25 +11,31 @@ TeachSurf::
 	msgbox TeachSurf_Text_0, MSGBOX_YESNO
 # 7 "data/maps/SurfSchool/scripts.pory"
 	compare VAR_RESULT, YES
+	goto_if_eq TeachSurf_1
+# 29 "data/maps/SurfSchool/scripts.pory"
+	compare VAR_RESULT, NO
 	goto_if_eq TeachSurf_2
-TeachSurf_1:
-# 24 "data/maps/SurfSchool/scripts.pory"
-	releaseall
 	return
 
-TeachSurf_2:
+TeachSurf_1:
 # 8 "data/maps/SurfSchool/scripts.pory"
 	checkmoney 100
 # 9 "data/maps/SurfSchool/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq TeachSurf_5
-# 18 "data/maps/SurfSchool/scripts.pory"
+# 24 "data/maps/SurfSchool/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq TeachSurf_6
-TeachSurf_4:
-# 22 "data/maps/SurfSchool/scripts.pory"
-	msgbox TeachSurf_Text_2
-	goto TeachSurf_1
+	return
+
+TeachSurf_2:
+# 30 "data/maps/SurfSchool/scripts.pory"
+	hidemoneybox
+# 31 "data/maps/SurfSchool/scripts.pory"
+	msgbox TeachSurf_Text_1
+# 32 "data/maps/SurfSchool/scripts.pory"
+	releaseall
+	return
 
 TeachSurf_5:
 # 10 "data/maps/SurfSchool/scripts.pory"
@@ -37,7 +43,7 @@ TeachSurf_5:
 # 11 "data/maps/SurfSchool/scripts.pory"
 	updatemoneybox
 # 12 "data/maps/SurfSchool/scripts.pory"
-	playse SE_SELECT
+	playse SE_SHOP
 # 13 "data/maps/SurfSchool/scripts.pory"
 	waitse
 # 14 "data/maps/SurfSchool/scripts.pory"
@@ -46,14 +52,26 @@ TeachSurf_5:
 	setvar VAR_0x8005, MOVE_SURF
 # 16 "data/maps/SurfSchool/scripts.pory"
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto TeachSurf_4
+# 17 "data/maps/SurfSchool/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq TeachSurf_9
+	return
 
 TeachSurf_6:
-# 19 "data/maps/SurfSchool/scripts.pory"
+# 25 "data/maps/SurfSchool/scripts.pory"
 	hidemoneybox
+# 26 "data/maps/SurfSchool/scripts.pory"
+	msgbox TeachSurf_Text_2
+	return
+
+TeachSurf_9:
+# 19 "data/maps/SurfSchool/scripts.pory"
+	addmoney 100
 # 20 "data/maps/SurfSchool/scripts.pory"
 	msgbox TeachSurf_Text_1
-	goto TeachSurf_4
+# 21 "data/maps/SurfSchool/scripts.pory"
+	releaseall
+	return
 
 
 TeachSurf_Text_0:
@@ -63,8 +81,8 @@ TeachSurf_Text_0:
 
 TeachSurf_Text_1:
 # 20 "data/maps/SurfSchool/scripts.pory"
-	.string "More Gold is required$"
+	.string "Please come again!$"
 
 TeachSurf_Text_2:
-# 22 "data/maps/SurfSchool/scripts.pory"
-	.string "Please come again!$"
+# 26 "data/maps/SurfSchool/scripts.pory"
+	.string "More Gold is required$"

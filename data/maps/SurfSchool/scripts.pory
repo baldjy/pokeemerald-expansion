@@ -9,17 +9,26 @@ script TeachSurf {
         if(var(VAR_RESULT)==TRUE){
         removemoney(100)
         updatemoneybox
-        playse(SE_SELECT)
+        playse(SE_SHOP)
         waitse
         hidemoneybox
         setvar(VAR_0x8005, MOVE_SURF)
         call(MoveTutor_EventScript_OpenPartyMenu)
+        if(var(VAR_RESULT)==0)
+        {
+            addmoney(100)
+            msgbox(format("Please come again!"))
+            releaseall
+        }
     }
         elif(var(VAR_RESULT)==FALSE){
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
-    msgbox(format("Please come again!"))
 }
-releaseall
+elif(var(VAR_RESULT) == NO){
+    hidemoneybox
+    msgbox(format("Please come again!"))
+    releaseall
+    }
 }

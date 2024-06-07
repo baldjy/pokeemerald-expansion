@@ -9,19 +9,28 @@ script TeachStrength {
         if(var(VAR_RESULT)==TRUE){
         removemoney(100)
         updatemoneybox
-        playse(SE_SELECT)
+        playse(SE_SHOP)
         waitse
         hidemoneybox
         setvar(VAR_0x8005, MOVE_STRENGTH)
         call(MoveTutor_EventScript_OpenPartyMenu)
+        if(var(VAR_RESULT)==0)
+        {
+            addmoney(100)
+            msgbox(format("Please come again!"))
+            releaseall
+        }
     }
         elif(var(VAR_RESULT)==FALSE){
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
-    msgbox(format("Please come again!"))
 }
-releaseall
+elif(var(VAR_RESULT) == NO){
+    hidemoneybox
+    msgbox(format("Please come again!"))
+    releaseall
+    }
 }
 
 script TeachCut {
@@ -33,19 +42,28 @@ script TeachCut {
         if(var(VAR_RESULT)==TRUE){
         removemoney(100)
         updatemoneybox
-        playse(SE_SELECT)
+        playse(SE_SHOP)
         waitse
         hidemoneybox
         setvar(VAR_0x8005, MOVE_CUT)
         call(MoveTutor_EventScript_OpenPartyMenu)
+        if(var(VAR_RESULT)==0)
+        {
+            addmoney(100)
+            msgbox(format("Please come again!"))
+            releaseall
+        }
     }
         elif(var(VAR_RESULT)==FALSE){
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
+   }
+elif(var(VAR_RESULT) == NO){
+    hidemoneybox
     msgbox(format("Please come again!"))
-}
-releaseall
+    releaseall
+    }
 }
 
 script TeachRockSmash {
@@ -57,19 +75,28 @@ script TeachRockSmash {
         if(var(VAR_RESULT)==TRUE){
         removemoney(100)
         updatemoneybox
-        playse(SE_SELECT)
+        playse(SE_SHOP)
         waitse
         hidemoneybox
         setvar(VAR_0x8005, MOVE_ROCK_SMASH)
         call(MoveTutor_EventScript_OpenPartyMenu)
+        if(var(VAR_RESULT)==0)
+        {
+            addmoney(100)
+            msgbox(format("Please come again!"))
+            releaseall
+        }
     }
         elif(var(VAR_RESULT)==FALSE){
         hidemoneybox
         msgbox(format("More Gold is required"))
     }
+    }
+    elif(var(VAR_RESULT) == NO){
+    hidemoneybox
     msgbox(format("Please come again!"))
-}
-releaseall
+    releaseall
+    }
 }
 
 script MyStone {
