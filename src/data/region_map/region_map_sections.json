@@ -1695,6 +1695,262 @@
       "y": 0,
       "width": 2,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_402",
+      "name": "ROUTE 402",
+      "x": 6,
+      "y": 0,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_403",
+      "name": "ROUTE 403",
+      "x": 7,
+      "y": 1,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_404",
+      "name": "ROUTE 404",
+      "x": 3,
+      "y": 3,
+      "width": 4,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_405",
+      "name": "ROUTE 405",
+      "x": 2,
+      "y": 2,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_406",
+      "name": "ROUTE 406",
+      "x": 2,
+      "y": 0,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_DUSK_FOREST",
+      "name": "DUSK FOREST",
+      "x": 8,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_BLUE_PEARL_CITY",
+      "name": "BLUE PEARL CITY",
+      "x": 7,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_601",
+      "name": "ROUTE 601",
+      "x": 7,
+      "y": 4,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_602",
+      "name": "ROUTE 602",
+      "x": 8,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_603",
+      "name": "ROUTE 603",
+      "x": 10,
+      "y": 3,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_604",
+      "name": "ROUTE 604",
+      "x": 11,
+      "y": 5,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_605",
+      "name": "ROUTE 605",
+      "x": 11,
+      "y": 6,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_606",
+      "name": "ROUTE 606",
+      "x": 9,
+      "y": 8,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_607",
+      "name": "ROUTE 607",
+      "x": 9,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_608",
+      "name": "ROUTE 608",
+      "x": 7,
+      "y": 10,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_609",
+      "name": "ROUTE 609",
+      "x": 4,
+      "y": 10,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_610",
+      "name": "ROUTE 610",
+      "x": 2,
+      "y": 10,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_611",
+      "name": "ROUTE 611",
+      "x": 0,
+      "y": 12,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_614",
+      "name": "ROUTE 614",
+      "x": 2,
+      "y": 13,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_617",
+      "name": "ROUTE 617",
+      "x": 2,
+      "y": 17,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MARIGOLD_TOWN",
+      "name": "MARIGOLD TOWN",
+      "x": 11,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_GRANDPORT_CITY",
+      "name": "GRANDPORT CITY",
+      "x": 11,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_BENIMO_TOWN",
+      "name": "BENIMO TOWN",
+      "x": 6,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_AMARYLLIS_CITY",
+      "name": "AMARYLLIS CITY",
+      "x": 2,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_REDDUST_TOWN",
+      "name": "RED DUST TOWN",
+      "x": 6,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_KARIMA_DESERT",
+      "name": "KARIMA DESERT",
+      "x": 11,
+      "y": 15,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MOONLIGHT_LAKE",
+      "name": "MOONLIGHT LAKE",
+      "x": 3,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_701",
+      "name": "ROUTE 701",
+      "x": 11,
+      "y": 9,
+      "width": 1,
+      "height": 6
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_702",
+      "name": "ROUTE 702",
+      "x": 9,
+      "y": 15,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_703",
+      "name": "ROUTE 703",
+      "x": 7,
+      "y": 15,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_704",
+      "name": "ROUTE 704",
+      "x": 4,
+      "y": 15,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_705",
+      "name": "ROUTE 705",
+      "x": 4,
+      "y": 16,
+      "width": 1,
+      "height": 2
     }
   ]
 }
