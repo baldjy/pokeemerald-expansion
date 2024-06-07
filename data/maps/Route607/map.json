@@ -3,7 +3,7 @@
   "name": "Route607",
   "layout": "LAYOUT_ROUTE607",
   "music": "MUS_RG_CREDITS",
-  "region_map_section": "MAPSEC_POKEMON_TOWER",
+  "region_map_section": "MAPSEC_ROUTE_607",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
