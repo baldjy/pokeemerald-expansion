@@ -3,7 +3,7 @@
   "name": "Route406_RiverPassage",
   "layout": "LAYOUT_ROUTE406_RIVER_PASSAGE",
   "music": "MUS_GSC_PEWTER",
-  "region_map_section": "MAPSEC_FIERY_PATH",
+  "region_map_section": "MAPSEC_ROUTE_406",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

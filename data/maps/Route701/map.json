@@ -3,7 +3,7 @@
   "name": "Route701",
   "layout": "LAYOUT_ROUTE701",
   "music": "MUS_RG_SEVII_ROUTE",
-  "region_map_section": "MAPSEC_NAVEL_ROCK_FRLG",
+  "region_map_section": "MAPSEC_ROUTE_701",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

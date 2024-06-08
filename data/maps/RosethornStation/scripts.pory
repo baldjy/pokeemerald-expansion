@@ -1,1 +1,50 @@
 mapscripts RosethornStation_MapScripts {}
+script RoseThornStationCall {
+    showmoneybox(0,0)
+    message("Welcome, where would you\nlike to travel?")
+    multichoice(25, 4, MULTI_CHOICE_STATION, 0)
+    closemessage
+    if(var(VAR_RESULT)==0)
+    {
+        hidemoneybox
+        msgbox(format("No need to travel there!"))
+        releaseall
+    }
+    if(var(VAR_RESULT)==1){
+        checkmoney(1000)
+        if(var(VAR_RESULT)==TRUE)
+        {
+            removemoney(1000)
+            updatemoneybox
+            playse(SE_SELECT)
+            waitse
+            hidemoneybox
+            msgbox(format("Have safe travels!"))
+            warp(MAP_GRANDPORT_STATION, 16, 2)
+        }
+            elif(var(VAR_RESULT)==FALSE){
+            hidemoneybox
+            msgbox(format("More Gold is required"))
+            releaseall
+            }
+    }
+    if(var(VAR_RESULT)==2)
+    {
+        checkmoney(1000)
+        if(var(VAR_RESULT)==TRUE)
+        {
+            removemoney(1000)
+            updatemoneybox
+            playse(SE_SELECT)
+            waitse
+            hidemoneybox
+        msgbox(format("Have safe travels!"))
+        warp(MAP_AMARYLLIS_STATION, 16, 2)
+    }
+    elif(var(VAR_RESULT)==FALSE){
+            hidemoneybox
+            msgbox(format("More Gold is required"))
+            releaseall
+            }
+    }
+}

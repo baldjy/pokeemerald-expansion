@@ -3,7 +3,7 @@
   "name": "Route602",
   "layout": "LAYOUT_ROUTE602",
   "music": "MUS_PETALBURG",
-  "region_map_section": "MAPSEC_ROUTE_126",
+  "region_map_section": "MAPSEC_ROUTE_602",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

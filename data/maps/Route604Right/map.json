@@ -3,7 +3,7 @@
   "name": "Route604Right",
   "layout": "LAYOUT_ROUTE604RIGHT",
   "music": "MUS_OLDALE",
-  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
+  "region_map_section": "MAPSEC_ROUTE_604",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

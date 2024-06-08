@@ -3061,4 +3061,8 @@ extern const u8 gText_BasePointsResetToZero[];
 extern const u8 gText_Fertilize[];
 extern const u8 gText_PlantBerry[];
 
+extern const u8 gText_Rosethorn [];
+extern const u8 gText_Grandport [];
+extern const u8 gText_Amaryllis [];
+
 #endif // GUARD_STRINGS_H
