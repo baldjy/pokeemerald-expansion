@@ -3,7 +3,7 @@
   "name": "Route619",
   "layout": "LAYOUT_ROUTE619",
   "music": "MUS_RG_SEVII_ROUTE",
-  "region_map_section": "MAPSEC_ROUTE_619",
+  "region_map_section": "MAPSEC_ROUTE_617",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
