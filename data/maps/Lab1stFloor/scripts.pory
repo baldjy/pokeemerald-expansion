@@ -1,4 +1,40 @@
-mapscripts Lab1stFloor_MapScripts {
+mapscripts Lab1stFloor_MapScripts {}
+
+script TriggerLab1 {
+	setvar(VAR_TEMP_1, 1)
+	call(WalkReception)
+}
+
+script TriggerLab2 {
+	setvar(VAR_TEMP_1, 2)
+	call(WalkReception)
+}
+
+script TriggerLab3 {
+	setvar(VAR_TEMP_1, 3)
+	call(WalkReception)
+}
+
+script TriggerLab4 {
+	setvar(VAR_TEMP_1, 4)
+	call(WalkReception)
+}
+
+script WalkReception {
+	if(!flag(DADDYTALK)){
+		switch(var(VAR_TEMP_1)){
+		case 1:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveLab1)
+		case 2:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveLab2)
+		case 3:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveLab3)
+		case 4:
+			applymovement(OBJ_EVENT_ID_PLAYER,MoveLab4)
+		}
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		call(ReceptionTalk)
+	}
 }
 script ReceptionTalk{
 	faceplayer
@@ -11,8 +47,32 @@ script ReceptionTalk{
 script LabGossip{
 	lockall
 	msgbox(format("And then, she came all the way towards me and said:\pWHAT ARE YOU LOOKING AT MISTER?"))
-	msgbox(format("Oh my godd...\pAnd then?"))
+	msgbox(format("Oh my god...\pAnd then?"))
 	msgbox(format("And then I woke up.\pThat was a weird dream..."))
     releaseall
 	end
+}
+movement MoveLab1 {
+	walk_up*2
+	walk_right*4
+	walk_up
+	step_end
+}
+movement MoveLab2 {
+	walk_up
+	walk_right*3
+	walk_up
+	step_end
+}
+movement MoveLab3 {
+	walk_up
+	walk_right*2
+	walk_up
+	step_end
+}
+movement MoveLab4 {
+	walk_up*2
+	walk_right
+	walk_up
+	step_end
 }

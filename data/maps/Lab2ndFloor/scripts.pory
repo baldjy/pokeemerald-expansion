@@ -5,6 +5,27 @@ const LOCALID_PKBALL1 = 2
 const LOCALID_PKBALL2 = 3
 const LOCALID_PKBALL3 = 4
 
+script DontLeaveLab {
+	if(!flag(DADDYTALK)){
+		msgbox(format("Let's go talk to dad!"))
+		applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_WalkDown)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		releaseall
+		end
+	}
+	elif(!flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)){
+		msgbox(format("I should take my pokemon!"))
+		applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_WalkDown)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		releaseall
+		end
+	}
+	else{
+		releaseall
+		end
+	}
+}
+
 script DaddyTalk{
 	if(!flag(DADDYTALK)){
 		faceplayer
