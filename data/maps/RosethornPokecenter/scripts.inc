@@ -24,10 +24,6 @@ NuerseJoy_Preset::
 	goto_if_eq NuerseJoy_Preset_1
 # 30 "data/maps/RosethornPokeCenter/scripts.pory"
 	msgbox NuerseJoy_Preset_Text_2, MSGBOX_NPC
-# 31 "data/maps/RosethornPokeCenter/scripts.pory"
-	waitfanfare
-# 32 "data/maps/RosethornPokeCenter/scripts.pory"
-	call NicknamePartyMon
 	return
 
 NuerseJoy_Preset_1:

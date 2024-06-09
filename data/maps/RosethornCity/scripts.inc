@@ -55,6 +55,10 @@ DontLeaveDad2_1:
 GiveFlyMon::
 # 39 "data/maps/RosethornCity/scripts.pory"
 	givemon SPECIES_PIDGEY, 5, , , , , , , , , , , , , , , , , , MOVE_FLY
+# 40 "data/maps/RosethornCity/scripts.pory"
+	waitfanfare
+# 41 "data/maps/RosethornCity/scripts.pory"
+	call NicknamePartyMon
 	return
 
 

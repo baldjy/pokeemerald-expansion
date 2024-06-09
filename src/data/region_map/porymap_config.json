@@ -3,8 +3,8 @@
     {
       "alias": "hoenn",
       "tilemap": {
-        "width": 64,
-        "height": 64,
+        "width": 32,
+        "height": 32,
         "format": "plain",
         "tileset_path": "graphics/pokenav/region_map/map.png",
         "tilemap_path": "graphics/pokenav/region_map/map.bin"
@@ -17,6 +17,17 @@
         "format": "C array",
         "path": "src/data/region_map/region_map_layout.h"
       }
+    },
+    {
+      "alias": "pokedex area screen",
+      "tilemap": {
+        "width": 32,
+        "height": 32,
+        "format": "8bpp",
+        "tileset_path": "graphics/pokenav/region_map/map.png",
+        "tilemap_path": "graphics/pokedex/region_map.bin"
+      },
+      "layout": null
     }
   ]
 }
