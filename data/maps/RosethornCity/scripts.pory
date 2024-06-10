@@ -1,4 +1,9 @@
 mapscripts RosethornCity_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: SetFlyFlagRosethorn
+}
+
+script SetFlyFlagRosethorn {
+	setflag(FLAG_VISITED_ROSETHORN_CITY)
 }
 
 script BlockMove1 {
@@ -38,5 +43,7 @@ script DontLeaveDad2 {
 script GiveFlyMon {
 	givemon(SPECIES_PIDGEY,5,,,,,,,,,,,,,,,,,,MOVE_FLY)
 	waitfanfare
+    setflag(FLAG_VISITED_LITTLEROOT_TOWN) // test fly
 	call(NicknamePartyMon)
+	releaseall
 }
