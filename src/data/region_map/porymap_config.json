@@ -11,12 +11,23 @@
       },
       "layout": {
         "width": 28,
-        "height": 20,
+        "height": 18,
         "offset_left": 1,
         "offset_top": 2,
         "format": "C array",
         "path": "src/data/region_map/region_map_layout.h"
       }
+    },
+    {
+      "alias": "pokedex area screen",
+      "tilemap": {
+        "width": 32,
+        "height": 32,
+        "format": "8bpp",
+        "tileset_path": "graphics/pokedex/region_map.png",
+        "tilemap_path": "graphics/pokedex/region_map.bin"
+      },
+      "layout": null
     }
   ]
 }
