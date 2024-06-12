@@ -1886,7 +1886,7 @@ static void CreateFlyDestIcons(void)
     u8 spriteId;
 
     canFlyFlag = FLAG_VISITED_ROSETHORN_CITY;
-    for (mapSecId = MAPSEC_ROSETHORN_CITY; mapSecId <= MAPSEC_ROUTE_705; mapSecId++)
+    for (mapSecId = MAPSEC_ROSETHORN_CITY; mapSecId <= MAPSEC_MOONLIGHT_LAKE; mapSecId++)
     {
         GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
