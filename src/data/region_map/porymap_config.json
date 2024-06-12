@@ -11,7 +11,7 @@
       },
       "layout": {
         "width": 28,
-        "height": 20,
+        "height": 18,
         "offset_left": 1,
         "offset_top": 2,
         "format": "C array",
