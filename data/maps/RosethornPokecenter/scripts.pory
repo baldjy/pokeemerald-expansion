@@ -1,1 +1,32 @@
-mapscripts RosethornPokeCenter_MapScripts {}
+mapscripts RosethornPokeCenter_MapScripts {
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+    MAP_SCRIPT_ON_TRANSITION: Rosethorn_PokemonCenter_OnTransition
+}
+
+script Rosethorn_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_ROSETHORN_CITY)
+    end
+}
+
+script NuerseJoy_Preset {
+    lock
+    faceplayer
+    msgbox("Would you like me to heal your party?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        incrementgamestat(GAME_STAT_USED_POKECENTER)
+        applymovement(1, Common_Movement_WalkInPlaceFasterLeft)
+        waitmovement(1)
+        dofieldeffect(FLDEFF_POKECENTER_HEAL)
+        waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+        applymovement(1, Common_Movement_WalkInPlaceFasterDown)
+        waitmovement(1)
+        special(HealPlayerParty)
+        msgbox("Come again soon.")
+        waitmessage
+        release
+        end
+    }
+    else{
+        msgbox("Have a nice day", MSGBOX_NPC)
+    }
+}

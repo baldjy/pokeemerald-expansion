@@ -9,5 +9,7 @@ RunningShoes::
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 # 7 "data/maps/PlayerRoom/scripts.pory"
 	setflag FLAG_SYS_B_DASH
+# 8 "data/maps/PlayerRoom/scripts.pory"
+	setrespawn HEAL_LOCATION_ROSETHORN_CITY
 	return
 

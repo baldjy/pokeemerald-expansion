@@ -5,121 +5,131 @@ RosethornStation_MapScripts::
 RoseThornStationCall::
 # 3 "data/maps/RosethornStation/scripts.pory"
 	showmoneybox 0, 0
-# 4 "data/maps/RosethornStation/scripts.pory"
-	message RoseThornStationCall_Text_0
 # 5 "data/maps/RosethornStation/scripts.pory"
-	multichoice 25, 4, MULTI_CHOICE_STATION, 0
+	message RoseThornStationCall_Text_0
 # 6 "data/maps/RosethornStation/scripts.pory"
-	closemessage
+	multichoice 25, 4, MULTI_CHOICE_STATION, 0
 # 7 "data/maps/RosethornStation/scripts.pory"
+	closemessage
+# 8 "data/maps/RosethornStation/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq RoseThornStationCall_2
 RoseThornStationCall_1:
-# 13 "data/maps/RosethornStation/scripts.pory"
+# 14 "data/maps/RosethornStation/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq RoseThornStationCall_5
 RoseThornStationCall_4:
-# 31 "data/maps/RosethornStation/scripts.pory"
+# 32 "data/maps/RosethornStation/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq RoseThornStationCall_7
+# 52 "data/maps/RosethornStation/scripts.pory"
+	hidemoneybox
+# 53 "data/maps/RosethornStation/scripts.pory"
+	msgbox RoseThornStationCall_Text_4
+# 54 "data/maps/RosethornStation/scripts.pory"
+	releaseall
 	return
 
 RoseThornStationCall_2:
-# 9 "data/maps/RosethornStation/scripts.pory"
-	hidemoneybox
 # 10 "data/maps/RosethornStation/scripts.pory"
-	msgbox RoseThornStationCall_Text_1
+	hidemoneybox
 # 11 "data/maps/RosethornStation/scripts.pory"
+	msgbox RoseThornStationCall_Text_1
+# 12 "data/maps/RosethornStation/scripts.pory"
 	releaseall
 	goto RoseThornStationCall_1
 
 RoseThornStationCall_5:
-# 14 "data/maps/RosethornStation/scripts.pory"
-	checkmoney 1000
 # 15 "data/maps/RosethornStation/scripts.pory"
+	checkmoney 1000
+# 16 "data/maps/RosethornStation/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq RoseThornStationCall_9
-# 25 "data/maps/RosethornStation/scripts.pory"
-	compare VAR_RESULT, FALSE
 	goto_if_eq RoseThornStationCall_10
+# 26 "data/maps/RosethornStation/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq RoseThornStationCall_11
 	goto RoseThornStationCall_4
 
 RoseThornStationCall_7:
-# 33 "data/maps/RosethornStation/scripts.pory"
-	checkmoney 1000
 # 34 "data/maps/RosethornStation/scripts.pory"
+	checkmoney 1000
+# 35 "data/maps/RosethornStation/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq RoseThornStationCall_13
-# 44 "data/maps/RosethornStation/scripts.pory"
-	compare VAR_RESULT, FALSE
 	goto_if_eq RoseThornStationCall_14
+# 45 "data/maps/RosethornStation/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq RoseThornStationCall_15
 	return
 
-RoseThornStationCall_9:
-# 17 "data/maps/RosethornStation/scripts.pory"
-	removemoney 1000
+RoseThornStationCall_10:
 # 18 "data/maps/RosethornStation/scripts.pory"
-	updatemoneybox
+	removemoney 1000
 # 19 "data/maps/RosethornStation/scripts.pory"
-	playse SE_SELECT
+	updatemoneybox
 # 20 "data/maps/RosethornStation/scripts.pory"
-	waitse
+	playse SE_SELECT
 # 21 "data/maps/RosethornStation/scripts.pory"
-	hidemoneybox
+	waitse
 # 22 "data/maps/RosethornStation/scripts.pory"
-	msgbox RoseThornStationCall_Text_2
+	hidemoneybox
 # 23 "data/maps/RosethornStation/scripts.pory"
+	msgbox RoseThornStationCall_Text_2
+# 24 "data/maps/RosethornStation/scripts.pory"
 	warp MAP_GRANDPORT_STATION, 16, 2
 	goto RoseThornStationCall_4
 
-RoseThornStationCall_10:
-# 26 "data/maps/RosethornStation/scripts.pory"
-	hidemoneybox
+RoseThornStationCall_11:
 # 27 "data/maps/RosethornStation/scripts.pory"
-	msgbox RoseThornStationCall_Text_3
+	hidemoneybox
 # 28 "data/maps/RosethornStation/scripts.pory"
+	msgbox RoseThornStationCall_Text_3
+# 29 "data/maps/RosethornStation/scripts.pory"
 	releaseall
 	goto RoseThornStationCall_4
 
-RoseThornStationCall_13:
-# 36 "data/maps/RosethornStation/scripts.pory"
-	removemoney 1000
+RoseThornStationCall_14:
 # 37 "data/maps/RosethornStation/scripts.pory"
-	updatemoneybox
+	removemoney 1000
 # 38 "data/maps/RosethornStation/scripts.pory"
-	playse SE_SELECT
+	updatemoneybox
 # 39 "data/maps/RosethornStation/scripts.pory"
-	waitse
+	playse SE_SELECT
 # 40 "data/maps/RosethornStation/scripts.pory"
-	hidemoneybox
+	waitse
 # 41 "data/maps/RosethornStation/scripts.pory"
-	msgbox RoseThornStationCall_Text_2
+	hidemoneybox
 # 42 "data/maps/RosethornStation/scripts.pory"
+	msgbox RoseThornStationCall_Text_2
+# 43 "data/maps/RosethornStation/scripts.pory"
 	warp MAP_AMARYLLIS_STATION, 16, 2
 	return
 
-RoseThornStationCall_14:
-# 45 "data/maps/RosethornStation/scripts.pory"
-	hidemoneybox
+RoseThornStationCall_15:
 # 46 "data/maps/RosethornStation/scripts.pory"
-	msgbox RoseThornStationCall_Text_3
+	hidemoneybox
 # 47 "data/maps/RosethornStation/scripts.pory"
+	msgbox RoseThornStationCall_Text_3
+# 48 "data/maps/RosethornStation/scripts.pory"
 	releaseall
 	return
 
 
 RoseThornStationCall_Text_0:
-# 4 "data/maps/RosethornStation/scripts.pory"
+# 5 "data/maps/RosethornStation/scripts.pory"
 	.string "Welcome, where would you\nlike to travel?$"
 
 RoseThornStationCall_Text_1:
-# 10 "data/maps/RosethornStation/scripts.pory"
+# 11 "data/maps/RosethornStation/scripts.pory"
 	.string "No need to travel there!$"
 
 RoseThornStationCall_Text_2:
-# 22 "data/maps/RosethornStation/scripts.pory"
+# 23 "data/maps/RosethornStation/scripts.pory"
 	.string "Have safe travels!$"
 
 RoseThornStationCall_Text_3:
-# 27 "data/maps/RosethornStation/scripts.pory"
+# 28 "data/maps/RosethornStation/scripts.pory"
 	.string "More Gold is required$"
+
+RoseThornStationCall_Text_4:
+# 53 "data/maps/RosethornStation/scripts.pory"
+	.string "We cannot travel there now$"

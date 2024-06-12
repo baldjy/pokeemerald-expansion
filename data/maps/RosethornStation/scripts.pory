@@ -1,6 +1,7 @@
 mapscripts RosethornStation_MapScripts {}
 script RoseThornStationCall {
     showmoneybox(0,0)
+    //dynmultichoice(25,4,FALSE,4,0,DYN_MULTICHOICE_CB_NONE,["TEST 1","TEST 2","TEST 3","TEST 4","TEST 5","TEST 6","TEST 7","TEST 8",])
     message("Welcome, where would you\nlike to travel?")
     multichoice(25, 4, MULTI_CHOICE_STATION, 0)
     closemessage
@@ -46,5 +47,10 @@ script RoseThornStationCall {
             msgbox(format("More Gold is required"))
             releaseall
             }
+    }
+    else{
+        hidemoneybox
+        msgbox(format("We cannot travel there now"))
+        releaseall
     }
 }

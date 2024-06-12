@@ -1,4 +1,9 @@
 mapscripts RosethornCity_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: SetFlyFlagRosethorn
+}
+
+script SetFlyFlagRosethorn {
+	setflag(FLAG_VISITED_ROSETHORN_CITY)
 }
 
 script BlockMove1 {
@@ -6,4 +11,39 @@ script BlockMove1 {
     faceplayer
     msgbox("These guys are blocking the road")
     releaseall
+}
+script DontLeaveDad {
+	if(!flag(DADDYTALK)){
+		msgbox(format("I should talk to Dad before going out there!"))
+		applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_WalkUp)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		releaseall
+		end
+	}
+	else{
+		releaseall
+		end
+	}
+}
+
+script DontLeaveDad2 {
+	if(!flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)){
+		msgbox(format("I should talk to Dad before going out there!"))
+		applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_WalkRight)
+		waitmovement(OBJ_EVENT_ID_PLAYER)
+		releaseall
+		end
+	}
+	else{
+		releaseall
+		end
+	}
+}
+
+script GiveFlyMon {
+	givemon(SPECIES_PIDGEY,5,,,,,,,,,,,,,,,,,,MOVE_FLY)
+	waitfanfare
+    setflag(FLAG_VISITED_LITTLEROOT_TOWN) // test fly
+	call(NicknamePartyMon)
+	releaseall
 }
