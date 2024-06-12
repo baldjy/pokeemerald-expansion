@@ -1,36 +1,53 @@
 RosethornMart_MapScripts::
 	.byte 0
 
-
 RosethornCity_Mart_EventScript_Clerk::
-# 4 "data/maps/RosethornMart/scripts.pory"
 	lock
-# 5 "data/maps/RosethornMart/scripts.pory"
 	faceplayer
-# 6 "data/maps/RosethornMart/scripts.pory"
 	message gText_HowMayIServeYou
-# 7 "data/maps/RosethornMart/scripts.pory"
 	waitmessage
-# 8 "data/maps/RosethornMart/scripts.pory"
-	pokemart MyMartTest
-# 9 "data/maps/RosethornMart/scripts.pory"
-	msgbox RosethornCity_Mart_EventScript_Clerk_Text_0
-# 10 "data/maps/RosethornMart/scripts.pory"
+	pokemart RosethornCity_Mart_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
-
 	.align 2
-# 14 "data/maps/RosethornMart/scripts.pory"
-MyMartTest:
-# 15 "data/maps/RosethornMart/scripts.pory"
+RosethornCity_Mart_Pokemart:
 	.2byte ITEM_POKE_BALL
-# 16 "data/maps/RosethornMart/scripts.pory"
 	.2byte ITEM_GREAT_BALL
-# 17 "data/maps/RosethornMart/scripts.pory"
-	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_GUARD_SPEC
+	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_NONE
+	release
+	end
 
-RosethornCity_Mart_EventScript_Clerk_Text_0:
-# 9 "data/maps/RosethornMart/scripts.pory"
-	.string "Please come again!$"
+RosethornCity_Mart_EventScript_ExpertM::
+	msgbox RosethornCity_Mart_Text_ItemsToTemporarilyElevateStats, MSGBOX_NPC
+	end
+
+RosethornCity_Mart_EventScript_Man::
+	msgbox RosethornCity_Mart_Text_DecisionsDetermineBattle, MSGBOX_NPC
+	end
+
+RosethornCity_Mart_Text_ItemsToTemporarilyElevateStats:
+	.string "There are items that temporarily\n"
+	.string "elevate the stats of POKéMON.\p"
+	.string "The ones I know you use in battle\n"
+	.string "are X ATTACK and X DEFEND…\p"
+	.string "I do believe that there are others\n"
+	.string "like them.$"
+
+RosethornCity_Mart_Text_DecisionsDetermineBattle:
+	.string "Use a certain move, or use an item\n"
+	.string "instead…\p"
+	.string "The TRAINER's decisions determine how\n"
+	.string "battles turn out, I think.$"
+
