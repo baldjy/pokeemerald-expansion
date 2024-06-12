@@ -14,8 +14,8 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_BLUE_PEARL_CITY",
-      "offset": -40,
+      "map": "MAP_NEW_WAY_TO_DUSK_FOREST",
+      "offset": 0,
       "direction": "down"
     }
   ],

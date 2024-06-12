@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ROSETHORN_UPPER_PART",
-  "name": "RosethornUpperPart",
-  "layout": "LAYOUT_ROSETHORN_UPPER_PART",
-  "music": "MUS_GSC_PEWTER",
-  "region_map_section": "MAPSEC_ROSETHORN_CITY",
+  "id": "MAP_NEW_WAY_TO_DUSK_FOREST",
+  "name": "NewWayToDuskForest",
+  "layout": "LAYOUT_NEW_WAY_TO_DUSK_FOREST",
+  "music": "MUS_CYCLING",
+  "region_map_section": "MAPSEC_FUCHSIA_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -14,13 +14,18 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROSETHORN_CITY",
-      "offset": -4,
+      "map": "MAP_WAY_TO_DUSK_FOREST",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_BLUE_PEARL_CITY",
+      "offset": -40,
       "direction": "down"
     },
     {
-      "map": "MAP_ROSETHORN_CITY",
-      "offset": -4,
+      "map": "MAP_BLUE_PEARL_CITY",
+      "offset": -40,
       "direction": "down"
     }
   ],
