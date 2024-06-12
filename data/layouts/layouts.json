@@ -4585,7 +4585,7 @@
       "id": "LAYOUT_WAY_TO_DUSK_FOREST",
       "name": "WayToDuskForest_Layout",
       "width": 26,
-      "height": 26,
+      "height": 21,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/WayToDuskForest/border.bin",
@@ -5420,6 +5420,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/RosethornUpperPart/border.bin",
       "blockdata_filepath": "data/layouts/RosethornUpperPart/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_WAY_TO_DUSK_FOREST",
+      "name": "NewWayToDuskForest_Layout",
+      "width": 24,
+      "height": 7,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/NewWayToDuskForest/border.bin",
+      "blockdata_filepath": "data/layouts/NewWayToDuskForest/map.bin"
     }
   ]
 }
