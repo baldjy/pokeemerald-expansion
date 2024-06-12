@@ -24,7 +24,7 @@
         "width": 32,
         "height": 32,
         "format": "8bpp",
-        "tileset_path": "graphics/pokenav/region_map/map.png",
+        "tileset_path": "graphics/pokedex/region_map.png",
         "tilemap_path": "graphics/pokedex/region_map.bin"
       },
       "layout": null

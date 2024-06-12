@@ -48,4 +48,9 @@ script RoseThornStationCall {
             releaseall
             }
     }
+    else{
+        hidemoneybox
+        msgbox(format("We cannot travel there now"))
+        releaseall
+    }
 }
