@@ -17,11 +17,6 @@
       "map": "MAP_ROSETHORN_CITY",
       "offset": -4,
       "direction": "down"
-    },
-    {
-      "map": "MAP_ROSETHORN_CITY",
-      "offset": -4,
-      "direction": "down"
     }
   ],
   "object_events": [
