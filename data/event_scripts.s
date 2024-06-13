@@ -1273,3 +1273,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route406_RiverPassage/scripts.inc"
 
 	.include "data/maps/RosethornUpperPart/scripts.inc"
+
+	.include "data/maps/MoonlightLakeUpperPart/scripts.inc"

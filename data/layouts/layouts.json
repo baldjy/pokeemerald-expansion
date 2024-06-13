@@ -5420,6 +5420,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/RosethornUpperPart/border.bin",
       "blockdata_filepath": "data/layouts/RosethornUpperPart/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOONLIGHT_LAKE_UPPER_PART",
+      "name": "MoonlightLakeUpperPart_Layout",
+      "width": 46,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/MoonlightLakeUpperPart/border.bin",
+      "blockdata_filepath": "data/layouts/MoonlightLakeUpperPart/map.bin"
     }
   ]
 }

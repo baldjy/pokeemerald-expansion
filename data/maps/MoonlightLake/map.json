@@ -17,6 +17,11 @@
       "map": "MAP_AMARYLLIS_CITY",
       "offset": -14,
       "direction": "left"
+    },
+    {
+      "map": "MAP_MOONLIGHT_LAKE_UPPER_PART",
+      "offset": 22,
+      "direction": "up"
     }
   ],
   "object_events": [

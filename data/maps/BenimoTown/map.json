@@ -22,6 +22,11 @@
       "map": "MAP_ROUTE609",
       "offset": 18,
       "direction": "left"
+    },
+    {
+      "map": "MAP_MOONLIGHT_LAKE_UPPER_PART",
+      "offset": -4,
+      "direction": "down"
     }
   ],
   "object_events": [

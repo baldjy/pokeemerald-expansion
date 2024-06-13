@@ -1,0 +1,39 @@
+{
+  "id": "MAP_MOONLIGHT_LAKE_UPPER_PART",
+  "name": "MoonlightLakeUpperPart",
+  "layout": "LAYOUT_MOONLIGHT_LAKE_UPPER_PART",
+  "music": "MUS_CREDITS",
+  "region_map_section": "MAPSEC_AQUA_HIDEOUT",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_MOONLIGHT_LAKE",
+      "offset": -22,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_BENIMO_TOWN",
+      "offset": 4,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
