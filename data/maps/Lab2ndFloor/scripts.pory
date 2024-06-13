@@ -10,67 +10,86 @@ script DontLeaveLab {
 		msgbox(format("Let's go talk to dad!"))
 		applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_WalkDown)
 		waitmovement(OBJ_EVENT_ID_PLAYER)
-		releaseall
+		release
 		end
 	}
 	elif(!flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)){
 		msgbox(format("I should take my pokemon!"))
 		applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_WalkDown)
 		waitmovement(OBJ_EVENT_ID_PLAYER)
-		releaseall
+		release
 		end
 	}
 	else{
-		releaseall
+		release
 		end
 	}
 }
 
 script DaddyTalk{
 	if(!flag(DADDYTALK)){
-		faceplayer
+		msgbox(format("DAD: Oh god I'm late!"))
+		applymovement(13,GetPlayer)
+		waitmovement(13)
+		switch(var(VAR_TEMP_1)){
+		case 1:
+			applymovement(13,Common_Movement_FaceUp)
+			applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_FaceDown)
+		case 2:
+			applymovement(13,Common_Movement_FaceRight)
+			applymovement(OBJ_EVENT_ID_PLAYER,Common_Movement_FaceLeft)
+		}
+		msgbox(format("DAD: There you are kiddo!\pDAD: I was going to meet you downstairs\pDAD: Follow me!"))
+		applymovement(13,GotoBirch)
+		switch(var(VAR_TEMP_1)){
+		case 1:
+			applymovement(OBJ_EVENT_ID_PLAYER,FollowDad1)
+		case 2:
+			applymovement(OBJ_EVENT_ID_PLAYER,FollowDad2)
+			}
+		waitmovement(OBJ_EVENT_ID_PLAYER)
 		applymovement(LOCALID_BIRCH, Common_Movement_FaceDown)
-		lockall
-		msgbox(format("DAD: There you are kiddo!\pDAD: I'm glad you could come so fast!\pDAD: First of all I would like to introduce you to my new boss!\pDAD: This is Professor BIRCH!"))
+		lock
+		msgbox(format("DAD: I'm glad you could come so fast!\pDAD: First of all I would like to introduce you to my new boss!\pDAD: This is Professor BIRCH!"))
 		msgbox(format("BIRCH: Hello there!\pBIRCH: You must be LEWIS's kid!\pBIRCH: I'm Professor BIRCH But everyone calls me the POKéMON PROFESSOR\pBIRCH: your dad was jsut telling me how much you love POKÉMON"))
 		msgbox(format("DAD: Which brings us to the reason why I called you here\pDAD: While I'm here starting my new research on POKÉMON types change on Regional Forms,\pDAD: I think it would be great to have you explore the world on your very first pokémon adventure!"))
 		msgbox(format("BIRCH: And I, as chief on this new lab am very pleased to gift your very first POKÉMON!\pBIRCH: See that bench right behind us, there you will see 3 POKÉBALLs which one cointaing a POKÉMON for you to choose\pBIRCH: Go on! Don't leave them waiting!"))
 		setflag(DADDYTALK)
-		releaseall
+		release
 		end
 	}
 	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3))){
 		faceplayer
-		lockall
+		lock
 		msgbox("DAD: Go on! there are no bad choices!")
-		releaseall
+		release
 		end
 	}
 	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)) && !flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
 	{
-		lockall
+		lock
 		msgbox(format("DAD: Go on kid, say thank you to PROF. BIRCH"))
-		releaseall
+		release
 	}
 	elif(flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
 	{
-		lockall
+		lock
 		msgbox("DAD: Safe journey out there!")
-		releaseall
+		release
 	}
 }
 script FillerText{
 	faceplayer
-	lockall
+	lock
 	msgbox(format("I'm sorry but I'm very busy right now"))
-	releaseall
+	release
 	end
 }
 script FillerText2{
 	faceplayer
-	lockall
+	lock
 	msgbox(format("MY DAD IS BETTER THAN YOURS!"))
-	releaseall
+	release
 	end
 }
 
@@ -79,40 +98,40 @@ script BirchTalk{
 		{
 			if(!flag(DADDYTALK)){
 			faceplayer
-			lockall
+			lock
 			msgbox(format("BIRCH: Oh you're {PLAYER}, right? Your dad was looking for you!"))
-			releaseall
+			release
 			end
 		}
 		else{
 			faceplayer
-			lockall
+			lock
 			msgbox(format("BIRCH: Go on! Don't leave them waiting!"))
-			releaseall
+			release
 			end
 		}
 	}
 	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)) && !flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
 	{
-		lockall
+		lock
 		bufferleadmonspeciesname(0)
 		msgbox(format("BIRCH: I see you got a {STR_VAR_1}\pBIRCH: I'm pretty sure you both will grow stronger and closer as you progress on your adventure\pBIRCH: Since you're now a POKÉMON Trainer I believe you're going to need this too."))
 		call(GiveDexAndPokeMenu)
-		releaseall
+		release
 	}
 	elif(flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH))
 	{
-		lockall
+		lock
 		msgbox("BIRCH: Have fun out there!")
-		releaseall
+		release
 	}
 }
 script PkBall1
 {
 	if(!flag(DADDYTALK)){
-		lockall
+		lock
 		msgbox("I gotta talk to Dad first")
-		releaseall
+		release
 	}
 	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
@@ -140,13 +159,13 @@ script PkBall1
         	hidemonpic
     	}
     	waitmessage
-    	releaseall
+    	release
 	}
 	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
-		lockall
+		lock
 		msgbox("I already got my POKÉMON")
-		releaseall
+		release
 	}
 
 }
@@ -154,9 +173,9 @@ script PkBall1
 script PkBall2
 {
 	if(!flag(DADDYTALK)){
-		lockall
+		lock
 		msgbox("I gotta talk to Dad first")
-		releaseall
+		release
 	}
 	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
@@ -184,22 +203,22 @@ script PkBall2
         	hidemonpic
     	}
     	waitmessage
-    	releaseall
+    	release
 	}
 	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
-		lockall
+		lock
 		msgbox("I already got my POKÉMON")
-		releaseall
+		release
 	}
 
 }
 script PkBall3
 {
 	if(!flag(DADDYTALK)){
-		lockall
+		lock
 		msgbox("I gotta talk to Dad first")
-		releaseall
+		release
 	}
 	elif(!(flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
@@ -227,13 +246,13 @@ script PkBall3
         	hidemonpic
     	}
     	waitmessage
-    	releaseall
+    	release
 	}
 	elif((flag(PKBALL1) || flag(PKBALL2) || flag(PKBALL3)))
 	{
-		lockall
+		lock
 		msgbox("I already got my POKÉMON")
-		releaseall
+		release
 	}
 	
 }
@@ -270,6 +289,22 @@ script GiveDexAndPokeMenu {
         release
 	}
 }
+script TriggerLab21 {
+	if(!flag(DADDYTALK)){
+	setvar(VAR_TEMP_1, 1)
+	call(DaddyTalk)
+	}
+	else{release
+	end}
+}
+script TriggerLab22 {
+	if(!flag(DADDYTALK)){
+	setvar(VAR_TEMP_1, 1)
+	call(DaddyTalk)
+	}
+	else{release
+	end}
+}
 movement PoketoBitch1 {
 	walk_down*2
 	walk_left*2
@@ -286,5 +321,35 @@ movement PoketoBitch3 {
 	walk_down*2
 	walk_left*4
 	face_up
+	step_end
+}
+
+movement GetPlayer {
+	walk_faster_right*6
+	walk_faster_up*4
+	step_end
+}
+
+movement GotoBirch {
+	walk_fast_down*7
+	walk_fast_left*7
+	walk_fast_up*3
+	face_down
+	step_end
+}
+
+movement FollowDad1 {
+	walk_fast_down*8
+	walk_fast_left*7
+	walk_fast_up*3
+	face_down
+	step_end
+}
+movement FollowDad2 {
+	walk_fast_left
+	walk_fast_down*7
+	walk_fast_left*7
+	walk_fast_up*3
+	face_down
 	step_end
 }

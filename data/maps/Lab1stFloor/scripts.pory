@@ -35,6 +35,10 @@ script WalkReception {
 		waitmovement(OBJ_EVENT_ID_PLAYER)
 		call(ReceptionTalk)
 	}
+	else{
+		releaseall
+		end
+	}
 }
 script ReceptionTalk{
 	faceplayer

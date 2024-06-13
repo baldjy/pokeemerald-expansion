@@ -37,151 +37,153 @@ TriggerLab4::
 WalkReception::
 # 24 "data/maps/Lab1stFloor/scripts.pory"
 	goto_if_unset DADDYTALK, WalkReception_1
-	return
+# 39 "data/maps/Lab1stFloor/scripts.pory"
+	releaseall
+	end
 
 WalkReception_1:
 # 25 "data/maps/Lab1stFloor/scripts.pory"
 	switch VAR_TEMP_1
 # 26 "data/maps/Lab1stFloor/scripts.pory"
-	case 1, WalkReception_5
+	case 1, WalkReception_6
 # 28 "data/maps/Lab1stFloor/scripts.pory"
-	case 2, WalkReception_6
+	case 2, WalkReception_7
 # 30 "data/maps/Lab1stFloor/scripts.pory"
-	case 3, WalkReception_7
+	case 3, WalkReception_8
 # 32 "data/maps/Lab1stFloor/scripts.pory"
-	case 4, WalkReception_8
-WalkReception_3:
+	case 4, WalkReception_9
+WalkReception_4:
 # 35 "data/maps/Lab1stFloor/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
 # 36 "data/maps/Lab1stFloor/scripts.pory"
 	call ReceptionTalk
 	return
 
-WalkReception_5:
+WalkReception_6:
 # 27 "data/maps/Lab1stFloor/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MoveLab1
-	goto WalkReception_3
-
-WalkReception_6:
-# 29 "data/maps/Lab1stFloor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MoveLab2
-	goto WalkReception_3
+	goto WalkReception_4
 
 WalkReception_7:
-# 31 "data/maps/Lab1stFloor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MoveLab3
-	goto WalkReception_3
+# 29 "data/maps/Lab1stFloor/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, MoveLab2
+	goto WalkReception_4
 
 WalkReception_8:
+# 31 "data/maps/Lab1stFloor/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, MoveLab3
+	goto WalkReception_4
+
+WalkReception_9:
 # 33 "data/maps/Lab1stFloor/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MoveLab4
-	goto WalkReception_3
+	goto WalkReception_4
 
 
 ReceptionTalk::
-# 40 "data/maps/Lab1stFloor/scripts.pory"
+# 44 "data/maps/Lab1stFloor/scripts.pory"
 	faceplayer
-# 41 "data/maps/Lab1stFloor/scripts.pory"
+# 45 "data/maps/Lab1stFloor/scripts.pory"
 	lockall
-# 42 "data/maps/Lab1stFloor/scripts.pory"
+# 46 "data/maps/Lab1stFloor/scripts.pory"
 	msgbox ReceptionTalk_Text_0
-# 43 "data/maps/Lab1stFloor/scripts.pory"
+# 47 "data/maps/Lab1stFloor/scripts.pory"
 	releaseall
 	end
 
 
 LabGossip::
-# 48 "data/maps/Lab1stFloor/scripts.pory"
-	lockall
-# 49 "data/maps/Lab1stFloor/scripts.pory"
-	msgbox LabGossip_Text_0
-# 50 "data/maps/Lab1stFloor/scripts.pory"
-	msgbox LabGossip_Text_1
-# 51 "data/maps/Lab1stFloor/scripts.pory"
-	msgbox LabGossip_Text_2
 # 52 "data/maps/Lab1stFloor/scripts.pory"
+	lockall
+# 53 "data/maps/Lab1stFloor/scripts.pory"
+	msgbox LabGossip_Text_0
+# 54 "data/maps/Lab1stFloor/scripts.pory"
+	msgbox LabGossip_Text_1
+# 55 "data/maps/Lab1stFloor/scripts.pory"
+	msgbox LabGossip_Text_2
+# 56 "data/maps/Lab1stFloor/scripts.pory"
 	releaseall
 	end
 
 
-# 55 "data/maps/Lab1stFloor/scripts.pory"
-MoveLab1:
-# 56 "data/maps/Lab1stFloor/scripts.pory"
-	walk_up
-# 56 "data/maps/Lab1stFloor/scripts.pory"
-	walk_up
-# 57 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 57 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 57 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 57 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 58 "data/maps/Lab1stFloor/scripts.pory"
-	walk_up
 # 59 "data/maps/Lab1stFloor/scripts.pory"
-	step_end
-
+MoveLab1:
+# 60 "data/maps/Lab1stFloor/scripts.pory"
+	walk_up
+# 60 "data/maps/Lab1stFloor/scripts.pory"
+	walk_up
 # 61 "data/maps/Lab1stFloor/scripts.pory"
-MoveLab2:
+	walk_right
+# 61 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
+# 61 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
+# 61 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
 # 62 "data/maps/Lab1stFloor/scripts.pory"
 	walk_up
 # 63 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 63 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 63 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 64 "data/maps/Lab1stFloor/scripts.pory"
-	walk_up
-# 65 "data/maps/Lab1stFloor/scripts.pory"
 	step_end
 
+# 65 "data/maps/Lab1stFloor/scripts.pory"
+MoveLab2:
+# 66 "data/maps/Lab1stFloor/scripts.pory"
+	walk_up
 # 67 "data/maps/Lab1stFloor/scripts.pory"
-MoveLab3:
+	walk_right
+# 67 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
+# 67 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
 # 68 "data/maps/Lab1stFloor/scripts.pory"
 	walk_up
 # 69 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 69 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 70 "data/maps/Lab1stFloor/scripts.pory"
-	walk_up
-# 71 "data/maps/Lab1stFloor/scripts.pory"
 	step_end
 
-# 73 "data/maps/Lab1stFloor/scripts.pory"
-MoveLab4:
-# 74 "data/maps/Lab1stFloor/scripts.pory"
+# 71 "data/maps/Lab1stFloor/scripts.pory"
+MoveLab3:
+# 72 "data/maps/Lab1stFloor/scripts.pory"
 	walk_up
+# 73 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
+# 73 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
 # 74 "data/maps/Lab1stFloor/scripts.pory"
 	walk_up
 # 75 "data/maps/Lab1stFloor/scripts.pory"
-	walk_right
-# 76 "data/maps/Lab1stFloor/scripts.pory"
-	walk_up
+	step_end
+
 # 77 "data/maps/Lab1stFloor/scripts.pory"
+MoveLab4:
+# 78 "data/maps/Lab1stFloor/scripts.pory"
+	walk_up
+# 78 "data/maps/Lab1stFloor/scripts.pory"
+	walk_up
+# 79 "data/maps/Lab1stFloor/scripts.pory"
+	walk_right
+# 80 "data/maps/Lab1stFloor/scripts.pory"
+	walk_up
+# 81 "data/maps/Lab1stFloor/scripts.pory"
 	step_end
 
 ReceptionTalk_Text_0:
-# 42 "data/maps/Lab1stFloor/scripts.pory"
+# 46 "data/maps/Lab1stFloor/scripts.pory"
 	.string "You must be LEWIS's kid.\p"
 	.string "If you're looking for your Dad you can\n"
 	.string "go straight upstairs$"
 
 LabGossip_Text_0:
-# 49 "data/maps/Lab1stFloor/scripts.pory"
+# 53 "data/maps/Lab1stFloor/scripts.pory"
 	.string "And then, she came all the way towards\n"
 	.string "me and said:\p"
 	.string "WHAT ARE YOU LOOKING AT MISTER?$"
 
 LabGossip_Text_1:
-# 50 "data/maps/Lab1stFloor/scripts.pory"
+# 54 "data/maps/Lab1stFloor/scripts.pory"
 	.string "Oh my god...\p"
 	.string "And then?$"
 
 LabGossip_Text_2:
-# 51 "data/maps/Lab1stFloor/scripts.pory"
+# 55 "data/maps/Lab1stFloor/scripts.pory"
 	.string "And then I woke up.\p"
 	.string "That was a weird dream...$"

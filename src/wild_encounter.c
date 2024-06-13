@@ -264,7 +264,7 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
 
     switch (rod)
     {
-    case OLD_ROD:
+    /*case OLD_ROD:
         if (rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_0)
             wildMonIndex = 0;
         else
@@ -274,7 +274,7 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
             wildMonIndex = 1 - wildMonIndex;
         break;
     case GOOD_ROD:
-        if (rand < ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_2)
+        if (rand < ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_1)
             wildMonIndex = 2;
         if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_2 && rand < ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_SLOT_3)
             wildMonIndex = 3;
@@ -283,7 +283,7 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
 
         if (swap)
             wildMonIndex = 6 - wildMonIndex;
-        break;
+        break; */
     case SUPER_ROD:
         if (rand < ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_5)
             wildMonIndex = 5;
