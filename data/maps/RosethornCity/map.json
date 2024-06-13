@@ -20,13 +20,18 @@
     },
     {
       "map": "MAP_ROUTE406",
-      "offset": 24,
+      "offset": 26,
       "direction": "left"
     },
     {
       "map": "MAP_ROUTE406_RIVER_PASSAGE",
       "offset": 2,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROSETHORN_UPPER_PART",
+      "offset": 4,
+      "direction": "up"
     }
   ],
   "object_events": [
