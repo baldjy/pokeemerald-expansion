@@ -6229,7 +6229,7 @@ static void Cmd_moveend(void)
                     if (gSpecialStatuses[battler].dancerUsedMove)
                     {
                         // in case a battler fails to act on a Dancer-called move
-                        turnOnHitmarker = TRUE;
+                        //turnOnHitmarker = TRUE;
                         break;
                     }
                 }
@@ -9619,7 +9619,7 @@ static void Cmd_various(void)
         gLastUsedAbility = gBattleMons[battler].ability;
         break;
     }
-    case VARIOUS_TRY_QUASH:
+    /*case VARIOUS_TRY_QUASH:
     {
         VARIOUS_ARGS(const u8 *failInstr);
         if (GetBattlerTurnOrderNum(gBattlerAttacker) > GetBattlerTurnOrderNum(gBattlerTarget)) // It's true if foe is faster, has a bigger priority, or switches
@@ -9632,7 +9632,7 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = cmd->nextInstr; // and then we proceed with the rest of our battlescript
         }
         return;
-    }
+    }*/
     case VARIOUS_INVERT_STAT_STAGES:
     {
         VARIOUS_ARGS();

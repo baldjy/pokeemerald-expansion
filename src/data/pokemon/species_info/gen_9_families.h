@@ -6614,7 +6614,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .shinyPalette = gMonShinyPalette_TerapagosNormal,
         .iconSprite = gMonIcon_TerapagosNormal,
         .iconPalIndex = 0,
-        FOOTPRINT(TerapagosNormal)
+        //FOOTPRINT(TerapagosNormal)
         .isLegendary = TRUE,
         .levelUpLearnset = sTerapagosLevelUpLearnset,
         .teachableLearnset = sTerapagosTeachableLearnset,

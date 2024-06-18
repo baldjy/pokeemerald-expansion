@@ -5014,7 +5014,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
 
                 if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
                     gHitMarker |= HITMARKER_NO_PPDEDUCT;
-                gBattlescriptCurrInstr = BattleScript_DazzlingProtected;
+                //gBattlescriptCurrInstr = BattleScript_DazzlingProtected;
             }
             else if (effect == 3)
             {
@@ -6145,7 +6145,7 @@ bool32 IsMoldBreakerTypeAbility(u32 ability)
 
 u32 GetBattlerAbility(u32 battler)
 {
-    bool32 noAbilityShield = GetBattlerHoldEffectIgnoreAbility(battler, TRUE) != HOLD_EFFECT_ABILITY_SHIELD;
+    //bool32 noAbilityShield = GetBattlerHoldEffectIgnoreAbility(battler, TRUE) != HOLD_EFFECT_ABILITY_SHIELD;
 
     if (gAbilitiesInfo[gBattleMons[battler].ability].cantBeSuppressed)
         return gBattleMons[battler].ability;
@@ -6154,15 +6154,15 @@ u32 GetBattlerAbility(u32 battler)
         return ABILITY_NONE;
 
     if (IsNeutralizingGasOnField()
-     && gBattleMons[battler].ability != ABILITY_NEUTRALIZING_GAS
-     && noAbilityShield)
+     && gBattleMons[battler].ability != ABILITY_NEUTRALIZING_GAS)
+     //&& noAbilityShield)
         return ABILITY_NONE;
 
     if (((IsMoldBreakerTypeAbility(gBattleMons[gBattlerAttacker].ability)
             && !(gStatuses3[gBattlerAttacker] & STATUS3_GASTRO_ACID))
             || gMovesInfo[gCurrentMove].ignoresTargetAbility)
             && gAbilitiesInfo[gBattleMons[battler].ability].breakable
-            && noAbilityShield
+            //&& noAbilityShield
             && gBattlerByTurnOrder[gCurrentTurnActionNumber] == gBattlerAttacker
             && gActionsByTurnOrder[gBattlerByTurnOrder[gBattlerAttacker]] == B_ACTION_USE_MOVE
             && gCurrentTurnActionNumber < gBattlersCount)
@@ -8034,10 +8034,10 @@ u32 GetMoveTarget(u16 move, u8 setTarget)
     return targetBattler;
 }
 
-static bool32 IsBattlerModernFatefulEncounter(u32 battler)
-{
-    return TRUE;
-}
+//static bool32 IsBattlerModernFatefulEncounter(u32 battler)
+//{
+//    return TRUE;
+//}
 
 //u8 IsMonDisobedient(void)
 //{

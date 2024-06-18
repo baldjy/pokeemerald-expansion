@@ -113,6 +113,7 @@
 #define MAP_RED_DUST_TOWN          (104 | (0 << 8))
 #define MAP_ROUTE406_RIVER_PASSAGE (105 | (0 << 8))
 #define MAP_ROSETHORN_UPPER_PART   (106 | (0 << 8))
+#define MAP_NEW_WAY_TO_DUSK_FOREST (107 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

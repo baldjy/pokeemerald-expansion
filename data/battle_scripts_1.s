@@ -2230,17 +2230,6 @@ BattleScript_EffectIonDeluge::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectQuash::
-	attackcanceler
-	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
-	attackstring
-	ppreduce
-	tryquash BattleScript_ButItFailed
-	attackanimation
-	waitanimation
-	printstring STRINGID_QUASHSUCCESS
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_MoveEnd
 
 BattleScript_EffectHealPulse::
 	attackcanceler
@@ -8223,15 +8212,6 @@ BattleScript_SoundproofProtected::
 BattleScript_IceFaceNullsDamage::
 	call BattleScript_TargetFormChangeWithString
 	return
-
-BattleScript_DazzlingProtected::
-	attackstring
-	ppreduce
-	pause B_WAIT_TIME_SHORT
-	call BattleScript_AbilityPopUpScripting
-	printstring STRINGID_POKEMONCANNOTUSEMOVE
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_MoveEnd
 
 BattleScript_MoveUsedPsychicTerrainPrevents::
 	printstring STRINGID_POKEMONCANNOTUSEMOVE
